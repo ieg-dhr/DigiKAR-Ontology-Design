@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Klassifikationssysteme
+title: Wissensorganisationssysteme
 permalink: /kos/
 ---
 

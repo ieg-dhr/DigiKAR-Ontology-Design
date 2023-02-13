@@ -10,7 +10,7 @@ Das Entwurfsmuster dient in erster Linie dazu, um Punktkoordinaten eines Ortes f
 
 ## Schema-Diagramm
 
-![Schema-Diagramm](/img/dmlo-place-centroid.svg)
+![Schema-Diagramm](/DigiKAR-Ontology-Design/img/dmlo-place-centroid.svg)
 
 
 ## Beispieldaten

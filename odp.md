@@ -31,7 +31,7 @@ Im Prinzip ist das Datenmodell für DigiKAR ein CRM- & CRMgeo-Anwendungsprofil, 
 
 Der Einfachheit halber befinden sich derzeit alle in SHACL repräsentierten Module in einer SHACL-Datei (siehe folgendes Schema-Diagramm). Die Ontologie-Entwurfsmuster können daher während der Projektlaufzeit bei Bedarf an einer zentralen Stelle erweitert oder angepasst werden, um ggf. bisher noch nicht unterstützte Anforderungen an die Datenmodellierung oder Datenbankabfragemöglichkeiten zu erfüllen.
 
-Erweiterbar sind auch die [Wissensorganisationssysteme](/DigiKAR-Ontology-Design/odp//kos/), die von den Entwurfsmustern z.B. zur Typisierung vonb Orten oder zur Klassifikation der Funktionen von Amtsträgern im Alten Reich vorgesehen sind.
+Erweiterbar sind auch die [Wissensorganisationssysteme](/DigiKAR-Ontology-Design/odp/kos/), die von den Entwurfsmustern z.B. zur Typisierung vonb Orten oder zur Klassifikation der Funktionen von Amtsträgern im Alten Reich vorgesehen sind.
 
 ![Schema-Diagramm](/img/dmlo.svg)
 *Schema-Diagramm der mit SHACL definierten Ontologie-Entwurfsmuster für Orstdaten und biographische Daten*

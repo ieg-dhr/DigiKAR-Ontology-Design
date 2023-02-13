@@ -1,3 +1,10 @@
 title: DigiKAR Ontology Design Patterns
 description: Dokumentation der Ontologie-Entwurfsmuster aus dem DigiKAR-Projekt
 theme: minima
+
+header_pages:
+  - index.md
+  - odp.md
+  - kos.md
+
+  

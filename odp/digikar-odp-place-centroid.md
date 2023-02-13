@@ -77,7 +77,7 @@ ORDER BY ?label
 ## Hinweise auf ähnliche Entwurfsmuster
 
 - Die Klasse `E47 Spatial Coordinates` aus der CRM-Ontologie könnte als -- vergleichsweise ähnlich einfache -- Alternative in einem Entwurfsmuster verwendet werden.
-- Das [Ontologie-Entwurfsmuster zur Modellierung der räumlichen Ausdehnung eines Ortes](/odp/presence/) kann verwendet werden, um ggf. Punktkoordinaten zu verschiedenen Zeiten sowie aus verschiedenen Quellen zu modellieren.
+- Das [Ontologie-Entwurfsmuster zur Modellierung der räumlichen Ausdehnung eines Ortes](/DigiKAR-Ontology-Design/odp/presence/) kann verwendet werden, um ggf. Punktkoordinaten zu verschiedenen Zeiten sowie aus verschiedenen Quellen zu modellieren.
 
 
 ## Relevante verfügbare Datensätze

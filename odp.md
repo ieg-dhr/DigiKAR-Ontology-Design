@@ -16,14 +16,14 @@ permalink: /odp/
 
 ## Vorgehensweise zur Entwicklung der Ontologie-Entwurfsmuster
 
-Die interative Vorgehensweise bei der Entwicklung der Ontologie-Entwurfsmuster (Ontology Design Patterns) für DigiKAR besteht aus den folgenden Schritten:
+Die iterative Vorgehensweise bei der Entwicklung der Ontologie-Entwurfsmuster (Ontology Design Patterns) für DigiKAR besteht aus den folgenden Schritten:
 
 1. Sammeln von sogenannten **User Stories**, welche die Anforderungen in kurzer, struktu-
 ierter Form beschreiben.
 2. Ableiten von sogenannten **Competency Questions** aus den jeweiligen User Stories.
 3. Auswählen oder Erweitern existierender oder ggf. Entwickeln neuer **Ontology Design Patterns** auf Basis der Anforderungsanalyse mit User Stories und Competency Questions.
 
-Sie insbesondere zu Schritt 1 und 2 die Dokumentation unserer Sammlung von Competency Questions auf der gesonderten GiutHub Pages-Website: [DigiKAR Competency Questions](https://ieg-dhr.github.io/DigiKAR-Competency-Questions/)
+Siehe insbesondere zu Schritt 1 und 2 die Dokumentation unserer Sammlung von Competency Questions auf der gesonderten GiutHub Pages-Website: [DigiKAR Competency Questions](https://ieg-dhr.github.io/DigiKAR-Competency-Questions/)
 
 ## Beschreibung von Ontologie-Entwurfsmustern mit SHACL
 

@@ -21,6 +21,7 @@ Der Germania Sacra-Datensatz zu den Bistümern des Alten Reiches enthält auch P
 ```turtle
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix dct: <http://purl.org/dc/terms/> .
+@prefix dmlo: <http://digikar.eu/ontology/> .
 @prefix dmlr-document: <http://digikar.eu/resource/document/> .
 @prefix dmlr-place: <http://digikar.eu/resource/place/> .
 @prefix frbroo: <http://iflastandards.info/ns/fr/frbr/frbroo/> .
@@ -66,6 +67,7 @@ dmlr-document:gs a efrbroo:F2_Expression ;
 ## SPARQL-Beispielabfragen
 
 ```
+PREFIX dmlo: <http://digikar.eu/ontology/>
 PREFIX dmlr: <http://digikar.eu/resource/>
 PREFIX dmlr-place: <http://digikar.eu/resource/place/>
 PREFIX dmlr-document: <http://digikar.eu/resource/document/>

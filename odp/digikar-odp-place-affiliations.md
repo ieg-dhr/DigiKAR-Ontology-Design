@@ -87,7 +87,7 @@ SELECT ?place ?administrative_entity ?begin ?end ?source WHERE {
 } ORDER BY DESC(?label)
 ```
 
-SPARQL-Abfrage der Orte mit grundherrschaftlicher Zugehörigkeit zu Grundherren:
+SPARQL-Abfrage der Orte mit grundherrschaftlicher Zugehörigkeit zu Grundherren -- in der Suche wird unterschieden zwischen normalisierten Einträgen zu den Grundherren (Variable `?right_owner_entity`) und ggf. noch nicht normalisierten Einträgen (Variable `?right_owner_literal`):
 
 ```sparql
 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>

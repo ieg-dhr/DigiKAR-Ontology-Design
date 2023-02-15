@@ -20,6 +20,7 @@ Die Ortsdaten in der Datenbank des [HOV (Historische Ortsverzeichnis von Sachsen
 ```turtle
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix dct: <http://purl.org/dc/terms/> .
+@prefix dmlo: <http://digikar.eu/ontology/> .
 @prefix dmlr-document: <http://digikar.eu/resource/document/> .
 @prefix dmlr-place: <http://digikar.eu/resource/place/> .
 @prefix frbroo: <http://iflastandards.info/ns/fr/frbr/frbroo/> .
@@ -28,7 +29,7 @@ Die Ortsdaten in der Datenbank des [HOV (Historische Ortsverzeichnis von Sachsen
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sf: <http://www.opengis.net/ont/sf#> .
 
-dmlr-place:hov_10001 a crm:E92_Spacetime_Volume ;
+dmlr-place:hov_10001 a dmlo:Place ;
   rdfs:label "Abend" ;
   dct:identifier "10001" ;
   geo:hasCentroid [ a sf:Point ;
@@ -49,6 +50,7 @@ dmlr-place:hov_10001 a crm:E92_Spacetime_Volume ;
 ## SPARQL-Beispielabfragen
 
 ```
+PREFIX dmlo: <http://digikar.eu/ontology/>
 PREFIX dmlr: <http://digikar.eu/resource/>
 PREFIX dmlr-place: <http://digikar.eu/resource/place/>
 PREFIX dmlr-document: <http://digikar.eu/resource/document/>

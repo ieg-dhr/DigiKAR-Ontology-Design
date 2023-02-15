@@ -56,6 +56,7 @@ dmlr-document:hov a frbroo:F2_Expression ;
 ## Competency Questions
 
 1. Zu welchen weltlichen oder geistlichen Verwaltungseinheiten gehören die Orte?
+2. Welche grundherrschaftlichen Zugehörigkeiten gibt es zu einem Ort?
 
 
 ## SPARQL-Beispielabfragen
@@ -86,7 +87,7 @@ SELECT ?place ?administrative_entity ?begin ?end ?source WHERE {
 } ORDER BY DESC(?label)
 ```
 
-SPARQL-Abfrage der Orte mit grundherrschaftlicher Zugfehörigkeit zu Grundherren:
+SPARQL-Abfrage der Orte mit grundherrschaftlicher Zugehörigkeit zu Grundherren:
 
 ```sparql
 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>

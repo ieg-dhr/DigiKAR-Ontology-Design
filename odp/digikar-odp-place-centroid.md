@@ -49,6 +49,8 @@ dmlr-place:hov_10001 a dmlo:Place ;
 
 ## SPARQL-Beispielabfragen
 
+SPARQL-Abfrage für Orte mit angegebenen Punktkoordinaten:
+
 ```
 PREFIX dmlo: <http://digikar.eu/ontology/>
 PREFIX dmlr: <http://digikar.eu/resource/>

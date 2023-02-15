@@ -66,6 +66,34 @@ SELECT ?place ?label ?point WHERE {
 ORDER BY ?label
 ```
 
+Die folgende Abfrage liefert die WKT-Punktkoordination auch als Längen- und Breitengrad-Angaben zu allen Orten (außer für Orte, die anhand des Begriffs dmlv-place:amals Amt typisiert sind):
+
+```sparql
+PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX sdh-so: <https://ontome.net/namespace/112/>
+
+PREFIX dmlo: <http://digikar.eu/ontology/>
+
+PREFIX dmlv-place: <http://digikar.eu/vocabulary/place/>
+
+SELECT DISTINCT ?place ?wkt ?lat ?long ?source WHERE { 
+  ?place_uri a dmlo:Place ;
+    rdfs:label ?place .
+
+  ?place_uri geo:hasCentroid ?point .
+  ?point geo:asWKT ?wkt .
+  ?point crm:P70i_is_documented_in/rdfs:label ?source .
+
+  BIND( xsd:decimal( REPLACE( STR(?wkt), '^[^0-9\\.-]*([-]?[0-9\\.]+) .*$', '$1' )) AS ?long )
+  BIND( xsd:decimal( REPLACE( STR(?wkt), '^.* ([-]?[0-9\\.]+)[^0-9\\.]*$', '$1' )) AS ?lat )
+
+  FILTER NOT EXISTS { ?place_uri crm:P41i_was_classified_by/crm:P42_assigned dmlv-place:am }
+
+} ORDER BY ASC(?place)
+```
+
 
 ## OWL-Datei
 

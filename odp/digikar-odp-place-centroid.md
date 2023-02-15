@@ -66,7 +66,7 @@ SELECT ?place ?label ?point WHERE {
 ORDER BY ?label
 ```
 
-Die folgende Abfrage liefert die WKT-Punktkoordination auch als Längen- und Breitengrad-Angaben zu allen Orten (außer für Orte, die anhand des Begriffs dmlv-place:amals Amt typisiert sind):
+Die folgende Abfrage liefert die WKT-Punktkoordination auch als Längen- und Breitengrad-Angaben zu allen Orten (außer für Orte, die anhand des Begriffs `dmlv-place:am` als Amt typisiert sind):
 
 ```sparql
 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>

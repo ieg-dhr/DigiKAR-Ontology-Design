@@ -15,7 +15,7 @@ Das Entwurfsmuster dient in erster Linie dazu, um Punktkoordinaten eines Ortes f
 
 ## Beispieldaten
 
-Die Ortsdaten in der Datenbank des [HOV (Historische Ortsverzeichnis von Sachsen)](https://hov.isgv.de/) umfassen auch Punktkoordinaten und können bei der Aufbereitung und Konvertierung der Daten in das DigiKAR-Datenmodell mit dem Enturfsmustre für Punktkoordinaten eines Ortes modelliert werden:
+Die Ortsdaten in der Datenbank des [HOV (Historische Ortsverzeichnis von Sachsen)](https://hov.isgv.de/) umfassen auch Punktkoordinaten und können bei der Aufbereitung und Konvertierung der Daten in das DigiKAR-Datenmodell mit dem Enturfsmuster für Punktkoordinaten eines Ortes modelliert werden:
 
 ```turtle
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .

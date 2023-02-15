@@ -7,7 +7,7 @@ categories: ODP
 
 # Ontologie-Entwurfsmuster zur Modellierung der räumlichen Ausdehnung eines Ortes
 
-Mit dem Entwurfsmuster kann die räumliche Ausdehnung eines Ortes modelliert werden. Typischerweise geschieht dies durch Polygone. Es ist aber durch den Einsatz des WKT-Formats möglich, auch nur Punktkoordinaten anzugeben. Das Entwurfsmuster ist um die CRM-Klasse `E93 Presence` aufgebaut, womit mit den zugehörigen CRMgeo-Elementen modelliert werden kann, welchen geographischen Raum ein Ort während einer bestimmten Zeit eingenommen hat. Dabei kann es sich etwa um die Fläche eines Anwesens oder die Grenzen einer Stadt oder auch eines geistlichen oder weltlichen Verwaltungsgebiets handeln. In der Definition und Beschreibung der Klasse `E93 Presence` ist in der CRM-Dokumentation als passendes Beispiel die Ausdehung des Römischen Reichs im Jahr 33 v.Chr. aufgeführt.
+Mit dem Entwurfsmuster kann die räumliche Ausdehnung eines Ortes modelliert werden. Typischerweise geschieht dies durch Polygone. Es ist aber durch den Einsatz des WKT-Formats möglich, auch nur Punktkoordinaten anzugeben. Das Entwurfsmuster ist um die CRM-Klasse `E93 Presence` aufgebaut, womit mit den zugehörigen [CRMgeo](https://www.cidoc-crm.org/crmgeo/)-Elementen modelliert werden kann, welchen geographischen Raum ein Ort während einer bestimmten Zeit eingenommen hat. Dabei kann es sich etwa um die Fläche eines Anwesens oder die Grenzen einer Stadt oder auch eines geistlichen oder weltlichen Verwaltungsgebiets handeln. In der Definition und Beschreibung der Klasse `E93 Presence` ist in der CRM-Dokumentation als passendes Beispiel die Ausdehung des Römischen Reichs im Jahr 33 v.Chr. aufgeführt.
 
 
 ## Schema-Diagramm

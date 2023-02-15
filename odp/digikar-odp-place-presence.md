@@ -12,7 +12,7 @@ Mit dem Entwurfsmuster kann die räumliche Ausdehnung eines Ortes modelliert wer
 
 ## Schema-Diagramm
 
-![Schema-Diagramm](/img/dmlo-place-presence.svg)
+![Schema-Diagramm](/DigiKAR-Ontology-Design/img/dmlo-place-presence.svg)
 
 ## Beispieldaten
 

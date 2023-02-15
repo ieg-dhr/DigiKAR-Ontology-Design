@@ -97,15 +97,15 @@ ORDER BY ?label
 
 - Mit dem Linked Places Format bzw. der Linked Places Ontology kann eine oder mehrere (zu verschiedenen Zeiten) GeoJSON-Geometrien modelliert werden.  
 - Die CRM-Erweiterung CRMgeo wird auch in den im Folgenden verlinkten Datenmodellen zur Modellierung voneinander abweichender Angaben zur territorialen Ausdehnung oder zu Grenzverläufen in verschiedenen historischen Quellen verwendet: 
-  - Francesco Beretta (für http://geo-larhra.org/)
-  - Vincent Ducatteeuw (siehe uhttps://dhistory.hypotheses.org/1055)
+  - Francesco Beretta (für [GEO-LARHRA](http://geo-larhra.org/))
+  - Vincent Ducatteeuw (siehe [digitalhistory: Vincent Ducatteeuw: Developing an urban gazetteer: modelling historical platial information, in: Digital History Berlin (Blog), erschienen am: 10. Januar 2022](https://dhistory.hypotheses.org/1055))
 
 
 
 ## Relevante verfügbare Datensätze
 
 - [Die Grenzen der Bistümer des Alten Reiches um 1500. Rekonstruktion der Germania Sacra anhand publizierter Karten und Quellenmaterialien (Datensammlungen der Germania Sacra. Materialien zur Kirche des Alten Reiches 4), Version 2, Göttingen 2022.](https://doi.org/10.26015/adwdocs-34)
-- [Viabundus-Datensatz Town outlines ]http://www.landesgeschichte.uni-goettingen.de/handelsstrassen/index.php#download)
+- [Viabundus-Datensatz Town outlines](http://www.landesgeschichte.uni-goettingen.de/handelsstrassen/index.php#download)
 
 
 

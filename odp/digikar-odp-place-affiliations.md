@@ -12,7 +12,7 @@ Als eines der zentralen Entwurfsmuster von DigiKAR dient das Datenmodell zur Mod
 
 ## Schema-Diagramm
 
-![Schema-Diagramm](/DigiKAR-Ontology-Design/img/dmlo-place-affiliation.svg)
+![Schema-Diagramm](/DigiKAR-Ontology-Design/img/dmlo-place-affilation.svg)
 
 
 ## Beispieldaten

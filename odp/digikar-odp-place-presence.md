@@ -39,12 +39,12 @@ dml-place:gs_17 a dmlo:Place ;
       crm:P81a_end_of_the_begin "1500-01-01"^^xsd:date ;
       crm:P81b_begin_of_the_end "1806-08-06"^^xsd:date ] ;
     crm:P167_was_within [ a crmgeo:SP6_Declarative_Place ;
-      crm:P70i_is_documented_in <http://digikar.eu/resource/document/gs> ;
+      crm:P70i_is_documented_in dmlr-document:gs ;
       crmgeo:P168_place_is_defined_by [ a geo:SP15_Geometry ;
         geo:asWKT "POLYGON ((13.750167 52.406361, ..., 13.750167 52.406361))" ] ] ] ;
   crm:P41i_was_classified_by [ a crm:E17_Type_Assignment ;
     crm:P42_assigned dmlv-place:bi ;
-    crm:P70i_is_documented_in <http://digikar.eu/resource/document/gs> ] .
+    crm:P70i_is_documented_in dmlr-document:gs ] .
     
     
 dmlr-document:gs a efrbroo:F2_Expression ;

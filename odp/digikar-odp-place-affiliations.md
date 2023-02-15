@@ -62,7 +62,7 @@ dmlr-document:hov a frbroo:F2_Expression ;
 
 SPARQL-Abfrage der Orte mit Zugehörigkeiten zu weltlichen Verwaltungseinheiten:
 
-```
+```sparql
 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
 PREFIX dct: <http://purl.org/dc/terms/>
 PREFIX geo: <http://www.opengis.net/ont/geosparql#>
@@ -86,6 +86,51 @@ SELECT ?place ?administrative_entity ?begin ?end ?source WHERE {
 } ORDER BY DESC(?label)
 ```
 
+SPARQL-Abfrage der Orte mit grundherrschaftlicher Zugfehörigkeit zu Grundherren:
+
+```sparql
+PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX sdh-so: <https://ontome.net/namespace/112/>
+
+PREFIX dmlo: <http://digikar.eu/ontology/>
+
+PREFIX dmlv-place: <http://digikar.eu/vocabulary/place/>
+PREFIX dmlv-right: <http://digikar.eu/vocabulary/right/>
+
+SELECT ?place ?right_owner_entity ?right_owner_literal ?right_owner_index ?affiliation_type ?begin ?end ?source WHERE { 
+  ?place a dmlo:Place ;
+    rdfs:label ?label .
+
+  ?place sdh-so:P8i_is_subject_to ?affiliation .
+  ?affiliation sdh-so:P29_has_holding_of_a_right_type dmlv-right:manorial ;
+    #sdh-so:P9_is_right_of ?right_owner ;
+    crm:P4_has_time-span/crm:P82a_begin_of_the_begin ?begin ;
+    crm:P4_has_time-span/crm:P82b_end_of_the_end ?end ;
+    crm:P70i_is_documented_in ?source .
+
+  OPTIONAL {
+    ?affiliation sdh-so:P9_is_right_of ?right_owner_entity 
+    FILTER(isURI(?right_owner_entity)) 
+  }
+
+  OPTIONAL {
+    ?affiliation sdh-so:P9_is_right_of ?right_owner_literal 
+    FILTER(isLiteral(?right_owner_literal)) 
+  }
+
+  OPTIONAL {
+    ?affiliation crm:P2_has_type ?affiliation_type 
+  }
+
+  OPTIONAL {
+    ?affiliation dmlo:hasIndex ?right_owner_index  
+  } 
+
+} ORDER BY DESC(?label)
+
+```
 
 ## OWL-Datei
 

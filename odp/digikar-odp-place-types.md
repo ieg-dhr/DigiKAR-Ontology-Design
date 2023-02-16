@@ -5,10 +5,10 @@ permalink: /odp/types/
 categories: ODP
 ---
 
-# Ontologie-Entwurfsmuster zur Modellierung der Ortstypen eines Ortes
+## Schema-Diagramm
 
 
-## Schema Diagram
+## Beispieldaten
 
 
 ## Beispieldaten

@@ -1,5 +1,5 @@
 ---
-title: Ontologie-Entwurfsmuster zur Modellierung von Ortsnahmen eines Ortes
+title: Ontologie-Entwurfsmuster zur Modellierung von Ortsnamen eines Ortes
 layout: page
 permalink: /odp/names/
 categories: ODP

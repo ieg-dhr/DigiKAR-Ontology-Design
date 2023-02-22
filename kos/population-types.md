@@ -8,8 +8,7 @@ tags: SKOS, Concept Scheme,
 
 ## Kodierschema für Arten von Einwohnern
 
-Die Begriffe im Kodierschema Einwohner (Präfix `dmlv-population:`) dienen zur Kodierung der Art von Einwohnern.
-
+Die Begriffe im Kodierschema Einwohner (Präfix `dmlv-population:`) dienen zur Kodierung der Art von Einwohnern in Daten, die mit dem [Ontologie-Entwurfsmuster für zur Modellierung von quantitativen Daten zu einem Ort](../odp/observations/) erstellt wurden. (Das Kodierschema `Place Property Types` steht im Schema-Diagramm des Entwurfsmuster stellvertretend für das zu verwendende Kodierschema.)
 RDF-Turtle-Repräsentation des Kodierschemas (Auszug aus den Einwohnerarten im Datenbestand des Repertorium Saxonicum):
 
 ```turtle

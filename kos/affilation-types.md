@@ -47,7 +47,7 @@ dmlv-affiliation:disputed a skos:Concept ;
   skos:prefLabel "disputed"@en ;
   skos:scopeNote "Begriff zur Typisierung einer Herrschaftsbeziehung mit mindestens zwei Herrschaftsträgern, zwischen denen die Herrschaft umstritten ist."@de ;
   skos:inScheme dmlv-affiliation: 
-.u
+.
 
 ```
 

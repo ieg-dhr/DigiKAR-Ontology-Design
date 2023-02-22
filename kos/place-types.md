@@ -6,7 +6,7 @@ categories: KOS
 tags: SKOS, Concept Scheme, 
 ---
 
-## Ortstypologie
+## Klassifikationssystem für Ortstypen
 
 Die Begriffe im Klassifikationssystem Ortstypologie (Präfix `dmlv-place:`) dienen zur Spezifizierung der Ortstypen (z.B. anhand der Begriffe für die Siedlungstypen Dorf oder Stadt).
 

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Ortstypologie
+title: Herrschaftsarten
 permalink: /kos/right-types/
 categories: KOS
 tags: SKOS, Concept Scheme, 

@@ -4,7 +4,7 @@ title: Wissensorganisationssysteme
 permalink: /kos/
 ---
 
-## Übersicht der bisher in den Ontologie-Entwurfsmusters verwendeten Wissensorganisationssysteme
+## Übersicht der bisher in den Ontologie-Entwurfsmustern verwendeten Wissensorganisationssysteme
 
 <ul>
 {% for p in site.pages %}
@@ -13,3 +13,7 @@ permalink: /kos/
    {% endif %}
 {% endfor %}
 </ul>
+
+## Modellierung der Wissensorganisationssysteme mit SKOS
+
+Wir verwenden SKOS (Simple Knowledge Organisation System) zur Modellierung der im Projekt eingesetzten Begriffsystemen wie Typologien, Klassifikationssystemen oder auch einfachen Kodierlisten (wie etwa zur Angabe von Sprachcodes).

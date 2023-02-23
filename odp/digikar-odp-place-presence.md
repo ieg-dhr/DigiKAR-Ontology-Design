@@ -64,7 +64,7 @@ dmlr-document:gs a efrbroo:F2_Expression ;
 
 ## SPARQL-Beispielabfragen
 
-```
+```sparql
 PREFIX dmlo: <http://digikar.eu/ontology/>
 PREFIX dmlr: <http://digikar.eu/resource/>
 PREFIX dmlr-place: <http://digikar.eu/resource/place/>

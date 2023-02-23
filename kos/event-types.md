@@ -6,7 +6,7 @@ categories: KOS
 tags: SKOS, Concept Scheme, 
 ---
 
-## Ortstypologie
+## Klassifikationssystem für Lebensereignisse
 
 Die Begriffe im Klassifikationssystem Ereignis (Präfix `dmlv-event:`) dienen zur Typisierung der Lebensereignisse von Personen.
 

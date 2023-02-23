@@ -21,6 +21,22 @@ categories: ODP
 
 ## SPARQL-Beispielabfragen
 
+Abfrage zur Ermittlung aller Aktivitäten in denen eine Person eine Rolle (Funktion) spielt:
+
+```sparql
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+
+SELECT * WHERE {
+  ?activity a crm:E7_Activity .
+  ?person_role crm:P01_has_domain ?activity ;
+    crm:P02_has_range ?person ;
+    crm:P14.1_in_the_role_of ?function .
+  ?person a crm:E21_Person .
+} 
+```
+
 
 ## OWL-Datei
 

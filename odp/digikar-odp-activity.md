@@ -7,6 +7,8 @@ categories: ODP
 
 ## Schema-Diagramm
 
+![Schema-Diagramm](../img/dmlo-actor-activity.svg)
+
 
 ## Beispieldaten
 

@@ -6,7 +6,7 @@ permalink: /odp/centroid/
 categories: ODP
 ---
 
-Das Entwurfsmuster dient in erster Linie dazu, um Punktkoordinaten eines Ortes für die Darstellung von weiterer ortsbasierter Information über den Ort auf einer Karte. Die Ermittlung der Punktkoordinaten zur geographischen Verortung sollte nach einer Konvention erfolgen, wie dass z.B. die Position der Kirche als Zentrum eines Dorfs zur Bestimmung der Punktkoordinaten verwendet wird. Die Erfassung des Ortsmittelpunkts erfolgt praktischerweise anhand der Eigenschaft [`has centroid`](https://opengeospatial.github.io/ogc-geosparql/geosparql11/#hascentroid) aus der [GeoSPARQL-Ontologie](http://www.opengis.net/ont/geosparql). Die Angaben zur Quelle der Koordinaten (z.B. eine historische Karte) werden mit dem Entwurfsmuster für Quellenangaben erfasst. Sollte von der Konvention zur Ermittlung der Zentrumskoordinaten abgewichen werden müssen, sollte das entsprechend begründet in den Angaben vermerkt werden.
+Das Entwurfsmuster dient in erster Linie dazu, um Punktkoordinaten eines Ortes für die Darstellung von weiterer ortsbasierter Information über den Ort auf einer Karte zu erfassen. Die Ermittlung der Punktkoordinaten zur geographischen Verortung sollte nach einer Konvention erfolgen, wie dass z.B. die Position der Kirche als Zentrum eines Dorfs zur Bestimmung der Punktkoordinaten verwendet wird. Die Erfassung des Ortsmittelpunkts erfolgt praktischerweise anhand der Eigenschaft [`has centroid`](https://opengeospatial.github.io/ogc-geosparql/geosparql11/#hascentroid) aus der [GeoSPARQL-Ontologie](http://www.opengis.net/ont/geosparql). Die Angaben zur Quelle der Koordinaten (z.B. eine historische Karte) werden mit dem Entwurfsmuster für Quellenangaben erfasst. Sollte von der Konvention zur Ermittlung der Zentrumskoordinaten abgewichen werden müssen, sollte das entsprechend begründet in den Angaben vermerkt werden.
 
 ## Schema-Diagramm
 
@@ -51,7 +51,7 @@ dmlr-place:hov_10001 a dmlo:Place ;
 
 SPARQL-Abfrage für Orte mit angegebenen Punktkoordinaten:
 
-```
+```sparql
 PREFIX dmlo: <http://digikar.eu/ontology/>
 PREFIX dmlr: <http://digikar.eu/resource/>
 PREFIX dmlr-place: <http://digikar.eu/resource/place/>

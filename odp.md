@@ -33,7 +33,7 @@ Der Einfachheit halber befinden sich derzeit alle in SHACL repräsentierten Modu
 
 Erweiterbar sind auch die [Wissensorganisationssysteme](kos/), die von den Entwurfsmustern z.B. zur Typisierung vonb Orten oder zur Klassifikation der Funktionen von Amtsträgern im Alten Reich vorgesehen sind.
 
-<img src="../img/Schema-Diagramm" target="_blank">
+<img src="./img/dmlo.svg" target="_blank" />
 *Schema-Diagramm der mit SHACL definierten Ontologie-Entwurfsmuster für Orstdaten und biographische Daten*
 
 Im Schema-Diagramm sind sowohl die Ontologie-Entwurfsmuster zur Modellierung der ortsbasierten Information (zentral für Arbeitspaket 2), als auch die zur Modellierung biographischer Daten, d.h. der Aktivitäten von historischen Personen benötigten Entwurfsmuster dargestellt. Zur besseren Sichtbarkeit sind die Module auf den oben unter der Überschrift _Katalog der bisher im Projekt entstandenen Ontologie-Entwurfsmuster_ verlinkten strukturierten Dokumentationen der Ontologie-Entwurfsmuster im jeweiligen Schema-Diagramm auf die Datrstellung der für das Muster wesentlichen Klassen und Eigenschaften beschränkt. In der Mitte des Diagramms erkennt man übrigens die Grundstruktur des [Linked Places Format](https://github.com/LinkedPasts/linked-places-format) bzw. der [Linked Pasts Ontology](https://github.com/LinkedPasts/linked-pasts-ontology) (zur Modellierung von (historischen) Ortsnamen, Ortstypen, Geometrien/Koordinaten und Relationen zwischen Orten), an denen wir uns bereits am Anfang des Projekts orientiert haben.

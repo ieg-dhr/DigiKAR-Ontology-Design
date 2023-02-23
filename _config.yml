@@ -4,6 +4,7 @@ theme: minima
 
 header_pages:
   - index.md
+  - intro.md
   - odp.md
   - kos.md
 

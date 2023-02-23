@@ -5,8 +5,6 @@ permalink: /odp/affiliations/
 categories: ODP
 ---
 
-# Ontologie-Entwurfsmuster zur Modellierung von multiplen Zugehörigkeiten eines Ortes
-
 Als eines der zentralen Entwurfsmuster von DigiKAR dient das Datenmodell zur Modellierung von Herrschaftsrechten. Dazu eignet sich die Klasse `C14 Holding of a Right or Obligation` aus der CRM-Erweiterung [SDHSS (Semantic Data for Humanities and Social Sciences)](https://ontome.net/namespace/11) als Ausgangsbasis für die Zusammenstellung des Anwendungsprofils aus existierenden CRM- und SDHSS-Klassen und -Eigenschaften.
  
 

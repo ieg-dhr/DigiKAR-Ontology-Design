@@ -6,7 +6,7 @@ categories: KOS
 tags: SKOS, Concept Scheme, 
 ---
 
-## Ortstypologie
+## Klassifikationssystem für Funktionen
 
 Die Begriffe im Klassifikationssystem Funktion (Präfix `dmlv-function:`) dienen zur Typisierung der Funktion von Personen.
 
@@ -156,8 +156,6 @@ dmlv-function:student a skos:Concept ;
     "stud. phil. / physicus" ; 
   skos:editorialNote "Gender-neutral oder nicht?" 
 .
-
-
 
 dmlv-function:kin a skos:Concept ;
   rdfs:label "Verwandtschaft" ;

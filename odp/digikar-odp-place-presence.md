@@ -93,10 +93,10 @@ ORDER BY ?label
 ## Axiomatisierung
 
 
-## Hinweise auf ähnliche//verwandte Entwurfsmuster
+## Hinweise auf ähnliche Entwurfsmuster
 
 - Mit dem [Linked Places Format](https://github.com/LinkedPasts/linked-places-format) bzw. der [Linked Pasts Ontology](https://github.com/LinkedPasts/linked-pasts-ontology) kann eine oder mehrere (zu verschiedenen Zeiten) GeoJSON-Geometrien modelliert werden.  
-- Die CRM-Erweiterung CRMgeo wird auch in den im Folgenden verlinkten Datenmodellen zur Modellierung voneinander abweichender Angaben zur territorialen Ausdehnung oder zu Grenzverläufen in verschiedenen historischen Quellen verwendet: 
+- Die CRM-Erweiterung [CRMgeo](https://www.cidoc-crm.org/crmgeo/home-5) wird auch in den im Folgenden verlinkten Datenmodellen zur Modellierung voneinander abweichender Angaben zur territorialen Ausdehnung oder zu Grenzverläufen in verschiedenen historischen Quellen verwendet: 
   - Francesco Beretta (für [GEO-LARHRA](http://geo-larhra.org/))
   - Vincent Ducatteeuw (siehe [digitalhistory: Vincent Ducatteeuw: Developing an urban gazetteer: modelling historical platial information, in: Digital History Berlin (Blog), erschienen am: 10. Januar 2022](https://dhistory.hypotheses.org/1055))
 

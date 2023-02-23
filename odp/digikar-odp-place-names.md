@@ -17,6 +17,23 @@ categories: ODP
 
 ## SPARQL-Beispielabfragen
 
+Die folgende SPARQL-Abfrage liefert als Ergebnis eine Liste von Namensvarianten für den Ort (Siedlungstyp Stadt) Mainz, wie sie aus der Topographia (1646) entnommen wurden.
+
+```sparql
+PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX frbroo: <http://iflastandards.info/ns/fr/frbr/frbroo/>
+PREFIX dmlr: <http://digikar.eu/resource/>
+PREFIX dmlr-place: <http://digikar.eu/resource/place/>
+PREFIX dmlr-document: <http://digikar.eu/resource/document/>
+
+SELECT ?name WHERE {
+  dmlr-place:M1 
+    crm:P1_is_identified_by ?place_name .
+  ?place_name crm:P190_has_symbolic_content ?name ;
+    crm:P70i_is_documented_in dmlr-document:topographia_1646 .
+}
+ORDER BY ?name
+
 
 ## OWL-Datei
 

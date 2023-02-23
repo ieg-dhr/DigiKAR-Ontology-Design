@@ -5,7 +5,7 @@ permalink: /odp/observations/
 categories: ODP
 ---
 
-Mit dem Entwurfsmuster können Eigenschaften eines Ortes modelliert werden, die quantitativ erfasst werden können bzw. zu denen es in den Quellen quantitative Angaben gibt. Exemplarisch dafür ist etwa die Anzahl und Art der Einwohner eines Ortes.
+Mit dem Entwurfsmuster können Eigenschaften eines Ortes modelliert werden, die quantitativ erfasst werden können bzw. zu denen es in den Quellen quantitative Angaben gibt (siehe dazu `Place Property Types' im Schema-Diagramm). Exemplarisch dafür ist etwa die Anzahl und Art der Einwohner eines Ortes. Generell wird mit dem Muster auch die Maßeinheit erfasst (siehe dazu `Measurement Unit Types' im Schema-Diagramm). 
 
 ## Schema-Diagramm
 

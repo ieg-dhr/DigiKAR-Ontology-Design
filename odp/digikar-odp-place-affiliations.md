@@ -148,6 +148,6 @@ SELECT ?place ?right_owner_entity ?right_owner_literal ?right_owner_index ?affil
 
 ## Relevante verfügbare Datensätze
 
-- HOV-Datenbankdump
-- RepSax-Datenbankdump
+- Datenbankdump des [Historischen Ortsverzeichnisses von Sachsen (HOV)](https://hov.isgv.de/)
+- Datenbankdump des [Repertorium Saxonicum (RepSax)](https://repsax.isgv.de/)
 

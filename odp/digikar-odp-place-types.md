@@ -34,7 +34,7 @@ Neben historischen Ortsnamen gehören auch die historischen Ortstypen zu den wes
 ## Hinweise auf ähnliche Entwurfsmuster
 
 - [Place Reference Data Model](https://docs.swissartresearch.net/et/place/#names-and-classifications) aus dem Musterkatalog von SARI (Swiss Art Research Infrastructure)
-- CRM-Klasse `E17_Type_Assignment` zur Typisierung des Orts
+- CRM-Klasse `E17 Type Assignment` zur Typisierung des Orts
 
 
 ## Relevante verfügbare Datensätze

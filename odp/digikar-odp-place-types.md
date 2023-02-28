@@ -35,6 +35,10 @@ dmlr-document:hov a frbroo:F2_Expression ;
 
 ## Competency Questions
 
+1. Welche Orte sind Siedlungen?
+2. Welche Arten von Siedlungen gibt es unter den Orten?
+3. Welche Orte sind Verwaltungsgebiete?
+
 
 ## SPARQL-Beispielabfragen
 

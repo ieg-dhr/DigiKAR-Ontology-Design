@@ -51,7 +51,7 @@ ORDER BY ?name
 ## Hinweise auf ähnliche Entwurfsmuster
 
 - [Place Reference Data Model](https://docs.swissartresearch.net/et/place/#names-and-classifications) aus dem Musterkatalog von SARI (Swiss Art Research Infrastructure)
-- FRBRoo-Klasse `F52_Name_Use_Activity` zur Modellierung eines zeitabhängigen Ortsnamens
+- FRBRoo-Klasse `F52 Name Use Activity` zur Modellierung eines zeitabhängigen Ortsnamens
 
 
 ## Relevante verfügbare Datensätze

@@ -114,5 +114,5 @@ SELECT DISTINCT ?place ?wkt ?lat ?long ?source WHERE {
 
 ## Relevante verfügbare Datensätze
 
-- HOV-Datenbankdump
+- Datenbankdump des [Historischen Ortsverzeichnisses von Sachsen (HOV)](https://hov.isgv.de/)
 

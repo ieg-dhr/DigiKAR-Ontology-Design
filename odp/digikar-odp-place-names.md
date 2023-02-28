@@ -7,6 +7,8 @@ categories: ODP
 
 ## Schema-Diagramm
 
+Information über historische Ortsnamen bzw. Ortsnamensvarianten gehören zu den grundlegenden Angaben, die in einem Gazetteer hinterlegt sein sollten. Zur Modellierung historischer Orstnamen und deren zeitlicher Gültigkeit wird im Entwurfsmuster die CRM-Klasse `E41 Appellation` und die Klasse `F52 Name Use Activity` aus der CRM-Erweiterung FRBRoo verwendet. Die Klasse `F52 Name Use Activity` ist eine Unterklasse der CRM-Klasse `E13 Attribute Assignment` und ermöglicht somit die Modellierung Attributen, die einer Entität zugeschrieben werden -- so wie eben Ortsnamen für einen bestimmten Zeitraum zur Bezeichnung eines Ortes verwendet worden sind.
+
 
 ## Beispieldaten
 

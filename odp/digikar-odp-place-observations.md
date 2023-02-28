@@ -79,7 +79,8 @@ dmlr-document:repsax a frbroo:F2_Expression ;
 
 ## Hinweise auf ähnliche Entwurfsmuster
 
-RDF Data Cube
+- [RDF Data Cube Vocabulary](http://www.w3.org/TR/vocab-data-cube/)
+- [Cube Schema](https://zazuko.github.io/cube-link/)
 
 
 ## Relevante verfügbare Datensätze

@@ -24,7 +24,7 @@ Neben historischen Ortsnamen gehören auch die historischen Ortstypen zu den wes
 dmlr-place:hov_10193 a dmlo:Place ;
   rdfs:label "Meißen" 
   crm:P41i_was_classified_by [ a crm:E17_Type_Assignment ;
-    crm:P3_has_note "Stadt" ;
+    crm:P3_has_note "Stadt" ; # Bezeichnung aus der Quelle
     crm:P42_assigned dmlv-place:to ; # Siedlungstyp Stadt
     crm:P70i_is_documented_in dmlr-document:hov ] .
     

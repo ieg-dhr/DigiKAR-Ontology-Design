@@ -7,6 +7,8 @@ categories: ODP
 
 ## Schema-Diagramm
 
+Neben historischen Ortsnamen gehören auch die historischen Ortstypen zu den wesentlichen Eigenschaften, die in einem Gazetteer bereitgestellt werden sollten. Die Angabe eines Ortstyps erfolgt anhand einem Begriff aus dem Klassifikationssystem mit der Ortstypologie (siehe `Place Typology` im Schema-Diagramm).
+
 
 ## Beispieldaten
 

@@ -56,5 +56,5 @@ ORDER BY ?name
 
 ## Relevante verfügbare Datensätze
 
-- DigiKAR-Datensatz mit Ortsnamen (historische Ortsnamen, Ortsnamensvarianten) aus der Topographia (1646)
+- DigiKAR-Datensatz mit Ortsnamen (historische Ortsnamen, Ortsnamensvarianten) aus der [Topographia Germaniae (1646)](https://de.wikisource.org/wiki/Topographia_Colonia_et_al.)
 

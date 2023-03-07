@@ -131,14 +131,6 @@ SELECT ?place ?right_owner_entity ?right_owner_literal ?right_owner_index ?affil
 
 ```
 
-## OWL-Datei
-
-
-## SHACL-Constraints
-
-
-## Axiomatisierung
-
 
 ## Hinweise auf ähnliche Entwurfsmuster
 

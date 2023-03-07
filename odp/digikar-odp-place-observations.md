@@ -68,15 +68,6 @@ dmlr-document:repsax a frbroo:F2_Expression ;
 ## SPARQL-Beispielabfragen
 
 
-## OWL-Datei
-
-
-## SHACL-Constraints
-
-
-## Axiomatisierung
-
-
 ## Hinweise auf ähnliche Entwurfsmuster
 
 - [RDF Data Cube Vocabulary](http://www.w3.org/TR/vocab-data-cube/)

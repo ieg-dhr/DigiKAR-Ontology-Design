@@ -42,14 +42,22 @@ dmlr-document:hov a frbroo:F2_Expression ;
 
 ## SPARQL-Beispielabfragen
 
+Alle Orte, die als Siedlung klassifiziert sind abfragen:
 
-## OWL-Datei
+```sparql
 
+```
 
-## SHACL-Constraints
+Begriffe mit jeweiligen Überbegriffen aus Ortstypologie abfragen:
 
+```sparql
+PREFIX dmlv-place: <http://digikar.eu/vocabulary/place/>
 
-## Axiomatisierung
+SELECT ?node ?parent WHERE {
+  ?node skos:inScheme dmlv-place: .
+  ?node skos:broader ?parent . 
+}
+```
 
 
 ## Hinweise auf ähnliche Entwurfsmuster
@@ -60,3 +68,4 @@ dmlr-document:hov a frbroo:F2_Expression ;
 
 ## Relevante verfügbare Datensätze
 
+- k.A.

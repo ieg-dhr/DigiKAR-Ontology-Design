@@ -10,7 +10,7 @@ Neben historischen Ortsnamen gehören auch die historischen Ortstypen zu den wes
 
 ## Schema-Diagramm
 
-![Schema-Diagramm](/DigiKAR-Ontology-Design/img/dmlo-place-type.svg)
+![Schema-Diagramm](../img/dmlo-place-type.svg)
 
 
 ## Beispieldaten

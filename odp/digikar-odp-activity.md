@@ -73,11 +73,11 @@ SELECT * WHERE {
 
 ## Hinweise auf ähnliche Entwurfsmuster
 
-- https://docs.swissartresearch.net/pattern/temporal/#agent-role-in-the-activity
-- https://docs.swissartresearch.net/et/persons/#social-relations
+- [Agent role in the activity pattern (SARI)](https://docs.swissartresearch.net/pattern/temporal/#agent-role-in-the-activity)
+- [social Relations (SARI)](https://docs.swissartresearch.net/et/persons/#social-relations)
 - [Time indexed participation](http://ontologydesignpatterns.org/wiki/Submissions:Time_indexed_participation)
 - [Time indexed person role](http://ontologydesignpatterns.org/wiki/Submissions:Time_indexed_person_role)
-- Modellierung der Rollen von Personen in Ereignissen in CRM (RDF) als n-äre Relation: [Roles (SARI)](ttps://docs.swissartresearch.net/pattern/general/#roles)
+- Modellierung der Rollen von Personen in Ereignissen in CRM (RDF) als n-äre Relation: [Roles (SARI)](ttps://docs.swissartresearch.net/pattern/general/##roles)
 
 
 ## Relevante verfügbare Datensätze

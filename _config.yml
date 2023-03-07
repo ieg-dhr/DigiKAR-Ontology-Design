@@ -7,8 +7,9 @@ header_pages:
   - intro.md
   - odp.md
   - kos.md
-  
-minima:
-  social_links:
-    twitter: digi_KAR
-    github: ieg-dhr/DigiKAR
+
+site:
+  minima:
+    social_links:
+      twitter: digi_KAR
+      github: ieg-dhr/DigiKAR

@@ -14,9 +14,18 @@ Information über historische Ortsnamen bzw. Ortsnamensvarianten gehören zu den
 
 ## Beispieldaten
 
+```turtle
+
+```
 
 
 ## Competency Questions
+
+1. Seit wann ist der Ortsname in Gebrauch?
+2. Von wann bis wann war der Ortsname in Gebrauch?
+3. Vom wem wurde der Ortsname eingeführt?
+4. Wo oder vom wem war der Ortsname in Gebrauch?
+5. Welche Ortsnamen sind zu den Orten erfasst?
 
 
 ## SPARQL-Beispielabfragen
@@ -39,17 +48,6 @@ SELECT ?name WHERE {
 ORDER BY ?name
 ```
 
-
-## OWL-Datei
-
-
-## SHACL-Constraints
-
-
-## Axiomatisierung
-
-
-
 ## Hinweise auf ähnliche Entwurfsmuster
 
 - [Place Reference Data Model](https://docs.swissartresearch.net/et/place/#names-and-classifications) aus dem Musterkatalog von SARI (Swiss Art Research Infrastructure)
@@ -57,4 +55,6 @@ ORDER BY ?name
 
 
 ## Relevante verfügbare Datensätze
+
+- DigiKAR-Datensatz mit Ortsnamen (historische Ortsnamen, Ortsnamensvarianten) aus der Topographia (1646)
 

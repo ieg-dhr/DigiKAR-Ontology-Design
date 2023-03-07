@@ -45,6 +45,16 @@ dmlr-document:hov a frbroo:F2_Expression ;
 Alle Orte, die als Siedlung klassifiziert sind abfragen:
 
 ```sparql
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX dmlo: <http://digikar.eu/ontology/>
+PREFIX dmlv-place: <http://digikar.eu/vocabulary/place/>
+ 
+SELECT ?place ?settlement_type WHERE {
+  ?place a dmlo:Place .
+  ?place crm:P41i_was_classified_by/crm:P42_assigned ?settlement_type .
+  ?settlement_type skos:broader dmlv-place:st . 
+}
 
 ```
 

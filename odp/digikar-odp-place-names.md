@@ -156,8 +156,8 @@ PREFIX dmlr-document: <http://digikar.eu/resource/document/>
 
 SELECT ?name WHERE {
   dmlr-place:M1 
-    crm:P1_is_identified_by ?place_name .
-  ?place_name crm:P190_has_symbolic_content ?name ;
+    frbroo:R63i_was_named_by ?place_name_use .
+  ?place_name_use frbroo:R64_used_name/crm:P190_has_symbolic_content ?name ;
     crm:P70i_is_documented_in dmlr-document:topographia_1646 .
 }
 ORDER BY ?name

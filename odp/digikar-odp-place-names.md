@@ -129,7 +129,6 @@ dmlr-place:M1 a dmlo:Place ;
                     crm:P81a_end_of_the_begin "1646"^^xsd:gYear ] ;
             crm:P70i_is_documented_in dmlr-document:topographia_1646 ] ;
             
-            
 dmlr-document:topographia_1646 a frbroo:F2_Expression ;
     rdfs:label "Topographia (1646)" .
 ```

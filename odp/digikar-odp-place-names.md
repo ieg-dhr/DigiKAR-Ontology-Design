@@ -14,8 +14,124 @@ Information über historische Ortsnamen bzw. Ortsnamensvarianten gehören zu den
 
 ## Beispieldaten
 
-```turtle
+Ortsnamen für Mainz aus der [Topographia Germaniae (1646)](https://de.wikisource.org/wiki/Topographia_Colonia_et_al.) extrahiert:
 
+```turtle
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dmlo: <http://digikar.eu/ontology/> .
+@prefix dmlr-document: <http://digikar.eu/resource/document/> .
+@prefix frbroo: <http://iflastandards.info/ns/fr/frbr/frbroo/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dmlr-place:M1 a dmlo:Place ;
+    rdfs:label "Mainz" ;
+    frbroo:R63i_was_named_by [ a frbroo:F52_Name_Use_Activity ;
+            frbroo:R64_used_name [ a crm:E41_Appellation ;
+                    crm:P190_has_symbolic_content "Mainz" ] ;
+            crm:P4_has_time-span [ a crm:E52_Time-Span ;
+                    crm:P81a_end_of_the_begin "1646"^^xsd:gYear ] ;
+            crm:P70i_is_documented_in dmlr-document:topographia_1646 ],
+        [ a frbroo:F52_Name_Use_Activity ;
+            frbroo:R64_used_name [ a crm:E41_Appellation ;
+                    crm:P190_has_symbolic_content "Moguntiaco" ] ;
+            crm:P4_has_time-span [ a crm:E52_Time-Span ;
+                    crm:P81a_end_of_the_begin "1646"^^xsd:gYear ] ;
+            crm:P70i_is_documented_in dmlr-document:topographia_1646 ],            
+        [ a frbroo:F52_Name_Use_Activity ;
+            frbroo:R64_used_name [ a crm:E41_Appellation ;
+                    crm:P190_has_symbolic_content "Magonza" ] ;
+            crm:P4_has_time-span [ a crm:E52_Time-Span ;
+                    crm:P81a_end_of_the_begin "1646"^^xsd:gYear ] ;
+            crm:P70i_is_documented_in dmlr-document:topographia_1646 ],
+        [ a frbroo:F52_Name_Use_Activity ;
+            frbroo:R64_used_name [ a crm:E41_Appellation ;
+                    crm:P190_has_symbolic_content "Mogontiacum" ] ;
+            crm:P4_has_time-span [ a crm:E52_Time-Span ;
+                    crm:P81a_end_of_the_begin "1646"^^xsd:gYear ] ;
+            crm:P70i_is_documented_in dmlr-document:topographia_1646 ],
+        [ a frbroo:F52_Name_Use_Activity ;
+            frbroo:R64_used_name [ a crm:E41_Appellation ;
+                    crm:P190_has_symbolic_content "Magontiaco" ] ;
+            crm:P4_has_time-span [ a crm:E52_Time-Span ;
+                    crm:P81a_end_of_the_begin "1646"^^xsd:gYear ] ;
+            crm:P70i_is_documented_in dmlr-document:topographia_1646 ],
+        [ a frbroo:F52_Name_Use_Activity ;
+            frbroo:R64_used_name [ a crm:E41_Appellation ;
+                    crm:P190_has_symbolic_content "Moguntiacum" ] ;
+            crm:P4_has_time-span [ a crm:E52_Time-Span ;
+                    crm:P81a_end_of_the_begin "1646"^^xsd:gYear ] ;
+            crm:P70i_is_documented_in dmlr-document:topographia_1646 ],
+        [ a frbroo:F52_Name_Use_Activity ;
+            frbroo:R64_used_name [ a crm:E41_Appellation ;
+                    crm:P190_has_symbolic_content "Maguntiacum" ] ;
+            crm:P4_has_time-span [ a crm:E52_Time-Span ;
+                    crm:P81a_end_of_the_begin "1646"^^xsd:gYear ] ;
+            crm:P70i_is_documented_in dmlr-document:topographia_1646 ],
+        [ a frbroo:F52_Name_Use_Activity ;
+            frbroo:R64_used_name [ a crm:E41_Appellation ;
+                    crm:P190_has_symbolic_content "Maguntia" ] ;
+            crm:P4_has_time-span [ a crm:E52_Time-Span ;
+                    crm:P81a_end_of_the_begin "1646"^^xsd:gYear ] ;
+            crm:P70i_is_documented_in dmlr-document:topographia_1646 ],
+        [ a frbroo:F52_Name_Use_Activity ;
+            frbroo:R64_used_name [ a crm:E41_Appellation ;
+                    crm:P190_has_symbolic_content "Mentz" ] ;
+            crm:P4_has_time-span [ a crm:E52_Time-Span ;
+                    crm:P81a_end_of_the_begin "1646"^^xsd:gYear ] ;
+            crm:P70i_is_documented_in dmlr-document:topographia_1646 ],
+        [ a frbroo:F52_Name_Use_Activity ;
+            frbroo:R64_used_name [ a crm:E41_Appellation ;
+                    crm:P190_has_symbolic_content "Mogontia" ] ;
+            crm:P4_has_time-span [ a crm:E52_Time-Span ;
+                    crm:P81a_end_of_the_begin "1646"^^xsd:gYear ] ;
+            crm:P70i_is_documented_in dmlr-document:topographia_1646 ],
+        [ a frbroo:F52_Name_Use_Activity ;
+            frbroo:R64_used_name [ a crm:E41_Appellation ;
+                    crm:P190_has_symbolic_content "Mongontiacum" ] ;
+            crm:P4_has_time-span [ a crm:E52_Time-Span ;
+                    crm:P81a_end_of_the_begin "1646"^^xsd:gYear ] ;
+            crm:P70i_is_documented_in dmlr-document:topographia_1646 ],
+        [ a frbroo:F52_Name_Use_Activity ;
+            frbroo:R64_used_name [ a crm:E41_Appellation ;
+                    crm:P190_has_symbolic_content "Mayance" ] ;
+            crm:P4_has_time-span [ a crm:E52_Time-Span ;
+                    crm:P81a_end_of_the_begin "1646"^^xsd:gYear ] ;
+            crm:P70i_is_documented_in dmlr-document:topographia_1646 ],
+        [ a frbroo:F52_Name_Use_Activity ;
+            frbroo:R64_used_name [ a crm:E41_Appellation ;
+                    crm:P190_has_symbolic_content "Maguntiacus" ] ;
+            crm:P4_has_time-span [ a crm:E52_Time-Span ;
+                    crm:P81a_end_of_the_begin "1646"^^xsd:gYear ] ;
+            crm:P70i_is_documented_in dmlr-document:topographia_1646 ],
+        [ a frbroo:F52_Name_Use_Activity ;
+            frbroo:R64_used_name [ a crm:E41_Appellation ;
+                    crm:P190_has_symbolic_content "" ] ;
+            crm:P4_has_time-span [ a crm:E52_Time-Span ;
+                    crm:P81a_end_of_the_begin "1646"^^xsd:gYear ] ;
+            crm:P70i_is_documented_in dmlr-document:topographia_1646 ],
+        [ a frbroo:F52_Name_Use_Activity ;
+            frbroo:R64_used_name [ a crm:E41_Appellation ;
+                    crm:P190_has_symbolic_content "Maguntiaco" ] ;
+            crm:P4_has_time-span [ a crm:E52_Time-Span ;
+                    crm:P81a_end_of_the_begin "1646"^^xsd:gYear ] ;
+            crm:P70i_is_documented_in dmlr-document:topographia_1646 ],
+        [ a frbroo:F52_Name_Use_Activity ;
+            frbroo:R64_used_name [ a crm:E41_Appellation ;
+                    crm:P190_has_symbolic_content "Moguntia" ] ;
+            crm:P4_has_time-span [ a crm:E52_Time-Span ;
+                    crm:P81a_end_of_the_begin "1646"^^xsd:gYear ] ;
+            crm:P70i_is_documented_in dmlr-document:topographia_1646 ],
+        [ a frbroo:F52_Name_Use_Activity ;
+            frbroo:R64_used_name [ a crm:E41_Appellation ;
+                    crm:P190_has_symbolic_content "Magotia" ] ;
+            crm:P4_has_time-span [ a crm:E52_Time-Span ;
+                    crm:P81a_end_of_the_begin "1646"^^xsd:gYear ] ;
+            crm:P70i_is_documented_in dmlr-document:topographia_1646 ] ;
+            
+            
+dmlr-document:topographia_1646 a frbroo:F2_Expression ;
+    rdfs:label "Topographia (1646)" .
 ```
 
 

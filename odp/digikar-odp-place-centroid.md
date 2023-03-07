@@ -97,15 +97,6 @@ SELECT DISTINCT ?place ?wkt ?lat ?long ?source WHERE {
 ```
 
 
-## OWL-Datei
-
-
-## SHACL-Constraints
-
-
-## Axiomatisierung
-
-
 ## Hinweise auf ähnliche Entwurfsmuster
 
 - Die Klasse `E47 Spatial Coordinates` aus der CRM-Ontologie könnte als -- vergleichsweise ähnlich einfache -- Alternative in einem Entwurfsmuster verwendet werden.

@@ -24,7 +24,7 @@ Auszug aus noch nicht vollständig normalisierten Daten (in Bearbeitung):
 <http://digikar.eu/resource/person/jahns_P-095> a crm:E21_Person ;
     rdfs:label "Kaspar Anton (Freiherr von) Albini" ;
     dct:identifier "P-095" ;
-    crm:P02i_is_range_of <http://digikar.eu/resource/activity/41cd15c0-67f7-49e2-bc36-6a4ec4b364f3/person_role>> ; ;
+    crm:P02i_is_range_of <http://digikar.eu/resource/activity/41cd15c0-67f7-49e2-bc36-6a4ec4b364f3/person_role>> ;
     foaf:name "Kaspar Anton (Freiherr von) Albini" .
 
 <http://digikar.eu/resource/activity/41cd15c0-67f7-49e2-bc36-6a4ec4b364f3> a crm:E7_Activity ;

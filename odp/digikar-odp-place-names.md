@@ -106,12 +106,6 @@ dmlr-place:M1 a dmlo:Place ;
             crm:P70i_is_documented_in dmlr-document:topographia_1646 ],
         [ a frbroo:F52_Name_Use_Activity ;
             frbroo:R64_used_name [ a crm:E41_Appellation ;
-                    crm:P190_has_symbolic_content "" ] ;
-            crm:P4_has_time-span [ a crm:E52_Time-Span ;
-                    crm:P81a_end_of_the_begin "1646"^^xsd:gYear ] ;
-            crm:P70i_is_documented_in dmlr-document:topographia_1646 ],
-        [ a frbroo:F52_Name_Use_Activity ;
-            frbroo:R64_used_name [ a crm:E41_Appellation ;
                     crm:P190_has_symbolic_content "Maguntiaco" ] ;
             crm:P4_has_time-span [ a crm:E52_Time-Span ;
                     crm:P81a_end_of_the_begin "1646"^^xsd:gYear ] ;

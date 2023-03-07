@@ -1,4 +1,4 @@
-<img src="img/DigiKAR_Logo_020921.svg" width="23%" alt="DigiKAR-Logo">
+<a href="https://digikar.eu/"><img src="img/DigiKAR_Logo_020921.svg" width="23%" alt="DigiKAR-Logo"></a>
 
 Auf dieser Website werden die im DigiKAR-Projekt entwickelten Ontologie-Entwurfsmuster dokumentiert und zur Nachnutzung bereitgestellt.
 

@@ -84,5 +84,4 @@ SELECT * WHERE {
 
 - DigiKAR-Datensätze (in Vorbereitung)
 - [Die Bischöfe des Alten Reiches nach Erwin Gatz. Basisdaten und Normdaten (Datensammlungen der Germania Sacra. Materialien zur Kirche des Alten Reiches 3), Göttingen 2021.](https://doi.org/10.26015/adwdocs-33)
-- [Die Bischöfe des Alten Reiches nach Erwin Gatz. Basisdaten und Normdaten (Datensammlungen der Germania Sacra. Materialien zur Kirche des Alten Reiches 3), Göttingen 2021.](https://doi.org/10.26015/adwdocs-33)
 - [Das geistliche Personal des Domstifts Mainz, bearbeitet von der Redaktion der Germania Sacra (Germania Sacra. Prosopographische Studien 4), Göttingen 2022.](https://doi.org/10.26015/adwdocs-2481)

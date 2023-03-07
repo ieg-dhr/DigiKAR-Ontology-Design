@@ -139,7 +139,7 @@ dmlr-document:topographia_1646 a frbroo:F2_Expression ;
 
 ## SPARQL-Beispielabfragen
 
-Die folgende SPARQL-Abfrage liefert als Ergebnis eine Liste von Namensvarianten für den Ort (Siedlungstyp Stadt) Mainz, wie sie aus der Topographia (1646) entnommen wurden.
+Die folgende SPARQL-Abfrage liefert als Ergebnis eine Liste von Namensvarianten für den Ort (Siedlungstyp Stadt) Mainz, wie sie aus der [Topographia Germaniae (1646)](https://de.wikisource.org/wiki/Topographia_Colonia_et_al.)  entnommen wurden.
 
 ```sparql
 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>

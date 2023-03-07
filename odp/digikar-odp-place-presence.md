@@ -84,15 +84,6 @@ ORDER BY ?label
 ```
 
 
-## OWL-Datei
-
-
-## SHACL-Constraints
-
-
-## Axiomatisierung
-
-
 ## Hinweise auf ähnliche Entwurfsmuster
 
 - Mit dem [Linked Places Format](https://github.com/LinkedPasts/linked-places-format) bzw. der [Linked Pasts Ontology](https://github.com/LinkedPasts/linked-pasts-ontology) kann eine oder mehrere (zu verschiedenen Zeiten) GeoJSON-Geometrien modelliert werden.  

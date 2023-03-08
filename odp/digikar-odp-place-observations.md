@@ -34,18 +34,18 @@ dmlr-place:repsax_1460 a dmlo:Place ;
     a crm:E16_Measurement ; 
     crm:P2_has_type dmlv-measurement:census ; 
     crm:P40_observed_dimension [
-a crm:E54_Dimension ; 
-    # rdfs:label Besessene Mann in Seylitz 
-    rdfs:label "Besessene Mann in Seylitz" ;
-    crm:P2_has_type dmlv-population:bm ; 
-    crm:P90_has_value "6"^^xsd:int ;
-    crm:P91_has_unit qudt:Person  
+      a crm:E54_Dimension ; 
+      # rdfs:label Besessene Mann in Seylitz 
+      rdfs:label "Besessene Mann in Seylitz" ;
+      crm:P2_has_type dmlv-population:bm ; 
+      crm:P90_has_value "6"^^xsd:int ;
+      crm:P91_has_unit qudt:Person  
     ] , [ 
-a crm:E54_Dimension ; 
-    rdfs:label "Gärtner in Seylitz" ;
-    crm:P2_has_type dmlv-population:gr ; 
-    crm:P90_has_value "3"^^xsd:int ;
-    crm:P91_has_unit qudt:Person 
+      a crm:E54_Dimension ; 
+      rdfs:label "Gärtner in Seylitz" ;
+      crm:P2_has_type dmlv-population:gr ; 
+      crm:P90_has_value "3"^^xsd:int ;
+      crm:P91_has_unit qudt:Person 
     ] ; 
     crm:P3_has_note "6 besessene Mann, darunter 3 Gärtner, die sind alle Christoph von Schleinitz zu Grödel lehen- und zinsbar."@de ;  
     crm:P4_has_time-span [ 
@@ -58,11 +58,14 @@ a crm:E54_Dimension ;
   owl:sameAs dmlr-place:hov_10295 .
 
 dmlr-document:repsax a frbroo:F2_Expression ;
-    rdfs:label "Repertorium Saxonicum" .
+  rdfs:label "Repertorium Saxonicum" .
 ```
 
 
 ## Competency Questions
+
+1. Wie viele Einwohner hatte ein Ort zu einer bestimmten Zeit?
+2. Welche Art von Einwohnern hatte ein Ort?
 
 
 ## SPARQL-Beispielabfragen

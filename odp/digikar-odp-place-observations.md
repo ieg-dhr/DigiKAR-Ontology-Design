@@ -70,6 +70,8 @@ dmlr-document:repsax a frbroo:F2_Expression ;
 
 ## SPARQL-Beispielabfragen
 
+in Vorbereitung ...
+
 
 ## Hinweise auf ähnliche Entwurfsmuster
 

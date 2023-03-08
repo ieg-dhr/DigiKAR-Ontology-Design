@@ -76,3 +76,4 @@ dmlr-document:repsax a frbroo:F2_Expression ;
 
 ## Relevante verfügbare Datensätze
 
+- Datenbankdump des [Repertorium Saxonicum (RepSax)](https://repsax.isgv.de/)

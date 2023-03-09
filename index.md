@@ -8,6 +8,7 @@ Auf dieser Website werden die im <a href="https://digikar.eu/">DigiKAR Projekt</
 
 Eine englischsprachige Übersicht zur Gestaltung der Ontologie-Entwurfsmuster im DigiKAR Projekt bietet das <a href="https://zenodo.org/record/4895498#.Y_eQj9CZM2w">Poster "Ontology-based Modeling of Time, Place and Agents"</a>, das für die <em>Data4History</em>-Konferenz 2021 erstellt wurde.
 
+
 ## Über DigiKAR
 Die »Digitale Kartenwerkstatt Altes Reich – historische Räume neu modellieren und visualisieren« ist ein Kooperationsprojekt des Leibniz-Instituts für Europäische Geschichte Mainz (IEG), des Leibniz-Instituts für Länderkunde Leipzig (IfL), des Leibniz-Instituts für Ost- und Südosteuropaforschung Regensburg(IOS), der Johannes Gutenberg-Universität Mainz (JGU) und der École des Hautes Études en Sciences Sociales Paris, Frankreich (EHESS).
 

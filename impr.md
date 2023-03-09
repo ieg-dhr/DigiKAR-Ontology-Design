@@ -1,4 +1,8 @@
-# Impressum
+---
+layout: page
+title: Impressum
+permalink: /impr/
+---
 
 Herausgeber: \
 Leibniz-Institut für Europäische Geschichte (IEG) \

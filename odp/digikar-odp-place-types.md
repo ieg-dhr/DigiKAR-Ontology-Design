@@ -81,4 +81,4 @@ SELECT ?node ?parent WHERE {
 
 ## Relevante verfügbare Datensätze
 
-- k.A.
+- Datenbankdump des [Historischen Ortsverzeichnisses von Sachsen (HOV)](https://hov.isgv.de/)

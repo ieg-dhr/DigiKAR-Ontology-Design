@@ -81,4 +81,4 @@ SELECT ?node ?parent WHERE {
 
 ## Relevante verfügbare Datensätze
 
-- Datenbankdump des [Historischen Ortsverzeichnisses von Sachsen (HOV)](https://hov.isgv.de/) (Tabelle `2a_siedlungstyp`)
+- Datenbankdump des [Historischen Ortsverzeichnisses von Sachsen (HOV)](https://hov.isgv.de/) (Tabelle `2a_siedlungstyp` und `varfassung`)

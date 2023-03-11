@@ -16,6 +16,7 @@ Mit dem Entwurfsmuster können Eigenschaften eines Ortes modelliert werden, die 
 
 ```turtle
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix crmsci: <http://www.cidoc-crm.org/cidoc-crm/CRMsci/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix dmlo: <http://digikar.eu/ontology/> .
 @prefix dmlr-document: <http://digikar.eu/resource/document/> .
@@ -30,7 +31,7 @@ Mit dem Entwurfsmuster können Eigenschaften eines Ortes modelliert werden, die 
 dmlr-place:repsax_1460 a dmlo:Place ;
   rdfs:label "Seylitz" ;
   dct:identifier "repsax_1460" ; 
-  crm:P39i_was_measured_by [
+  :crmsci:O24i_was_measured_by [
     a crm:E16_Measurement ; 
     crm:P2_has_type dmlv-measurement:census ; 
     crm:P40_observed_dimension [

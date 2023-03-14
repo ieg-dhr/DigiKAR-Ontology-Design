@@ -1,7 +1,7 @@
 <a href="https://digikar.eu/"><img src="img/DigiKAR_Logo_020921.svg" width="23%" alt="DigiKAR-Logo"></a>
 
 # Ontologie-Entwurfsmuster im DigiKAR-Projekt
-Auf dieser Website werden die im <a href="https://digikar.eu/">DigiKAR Projekt</a> entwickelten Ontologie-Entwurfsmuster dokumentiert und zur Nachnutzung bereitgestellt.
+Auf dieser Website werden die im <a href="https://digikar.eu/">DigiKAR Projekt</a> auf Basis der [User Stories and zugehörigen Competency Questions](https://ieg-dhr.github.io/DigiKAR-Competency-Questions/) entwickelten Ontologie-Entwurfsmuster dokumentiert und zur Nachnutzung bereitgestellt.
 
 - [Katalog der Ontologie-Entwurfsmuster](odp/)
 - [Übersicht der eingesetzten Wissensorganisationssysteme](kos/)

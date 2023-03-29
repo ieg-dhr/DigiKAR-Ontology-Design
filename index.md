@@ -6,7 +6,7 @@ Auf dieser Website werden die im <a href="https://digikar.eu/">DigiKAR Projekt</
 - [Katalog der Ontologie-Entwurfsmuster](odp/)
 - [Übersicht der eingesetzten Wissensorganisationssysteme](kos/)
 
-Eine englischsprachige Übersicht zur Gestaltung der Ontologie-Entwurfsmuster im DigiKAR Projekt bietet das <a href="https://zenodo.org/record/4895498#.Y_eQj9CZM2w">Poster "Ontology-based Modeling of Time, Place and Agents"</a>, das für die <em>Data4History</em>-Konferenz 2021 erstellt wurde.
+Eine englischsprachige Übersicht zur Gestaltung der Ontologie-Entwurfsmuster im DigiKAR Projekt bietet das <a href="https://zenodo.org/record/4895498#.Y_eQj9CZM2w">Poster "Ontology-based Modeling of Time, Place and Agents"</a>, das zu Projektbeginn für die <em>Data4History</em>-Konferenz 2021 erstellt wurde.
 
 
 ## Über DigiKAR
@@ -15,3 +15,6 @@ Die »Digitale Kartenwerkstatt Altes Reich – historische Räume neu modelliere
 Das Projekt widmet sich Fragen der Fragmentierung, Verflechtung, Pluralität und Konkurrenz räumlicher Strukturen im frühneuzeitlichen Heiligen Römischen Reich deutscher Nation. Anhand zweier Fallstudien zu den Kurfürstentümern Mainz und Sachsen werden in der „digitalen Kartenwerkstatt“ alternative Ansätze für die Erfassung, Aufbereitung und Darstellung mehrdeutiger räumlicher Konfigurationen und Praktiken erarbeitet. DigiKAR möchte damit einerseits generell einen Beitrag zur geschichtswissenschaftlichen Erforschung des Alten Reichs als Raum geteilter und überlappender Herrschaft leisten. Andererseits sollen innovative und für andere Forschungsprojekte anschlussfähige Konzepte sowie „Best Practices“ der Sammlung, Modellierung und Visualisierung von ortsbezogenen historischen Daten entwickelt werden.
 
 Das Vorhaben wird für den Zeitraum von drei Jahren durch das Programm »Leibniz-Kooperative Exzellenz« der Leibniz-Gemeinschaft gefördert.
+
+## Datensätze aus Kooperationen
+Das [Institut für Sächsische Geschichte und Volkskunde (ISGV)](https://www.isgv.de/) stellt DigiKAR für die Dauer des Projekts (raumbezogene) Datensätze zur Geschichte Sachsens aus den ISGV-Datenbanken HOV [(Historisches Ortsverzeichnis von Sachsen)](https://www.isgv.de/projekte/saechsische-geschichte/historisches-ortsverzeichnis-von-sachsen) und RepSax [(Repertorium Saxonicum)](https://www.isgv.de/projekte/archiv/repertorium-saxonicum) für Zwecke der Forschung und Entwicklung zur Verfügung. Auf den folgenden Seiten zu den einzelnen Ontologie-Entwurfsmustern im DigiKAR-Projekt wird unter "Beispieldaten" und "verfügbare Datensätze" auf diese Datensätze Bezug genommen. Wir danken dem ISGV herzlich für die Überlassung der Datensätze.

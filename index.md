@@ -6,6 +6,8 @@ Auf dieser Website werden die im <a href="https://digikar.eu/">DigiKAR Projekt</
 - [Katalog der Ontologie-Entwurfsmuster](odp/)
 - [Übersicht der eingesetzten Wissensorganisationssysteme](kos/)
 
+In einem die Veröffentlichung dieser Seite begleitenden Beitrag auf dem [Blog des DH Labs des Leibniz-Instituts für Europäische Geschichte](https://dhlab.hypotheses.org/) werden die ortsbezogenen Ontologie-Entwurfsmuster näher vorgestellt und ihre Rolle für die formale Modellierung historischer Fragestellungen diskutiert.
+
 Eine englischsprachige Übersicht zur Gestaltung der Ontologie-Entwurfsmuster im DigiKAR Projekt bietet das <a href="https://zenodo.org/record/4895498#.Y_eQj9CZM2w">Poster "Ontology-based Modeling of Time, Place and Agents"</a>, das zu Projektbeginn für die <em>Data4History</em>-Konferenz 2021 erstellt wurde.
 
 

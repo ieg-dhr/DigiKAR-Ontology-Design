@@ -14,7 +14,7 @@ permalink: /odp/
 {% endfor %}
 </ul>
 
-Bei der Erstellung der strukturierten Dokumentation der einzelnen Ontologie-Entwurfsmuster im Katalog haben wir uns an der Ergebnissen der Studie <a href="https://doi.org/10.3233/978-1-61499-826-6-15">“How to Document Ontology Design Patterns”</a> orientiert.
+Bei der Erstellung der strukturierten Dokumentation der einzelnen Ontologie-Entwurfsmuster im Katalog haben wir uns an den Ergebnissen der Studie <a href="https://doi.org/10.3233/978-1-61499-826-6-15">“How to Document Ontology Design Patterns”</a> orientiert.
 
 ## Vorgehensweise zur Entwicklung der Ontologie-Entwurfsmuster
 

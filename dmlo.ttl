@@ -1,0 +1,816 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix crmgeo: <http://www.ics.forth.gr/isl/CRMgeo/> .
+@prefix crmsci: <http://www.cidoc-crm.org/cidoc-crm/CRMsci/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix disco: <http://rdf-vocabulary.ddialliance.org/discovery#> .
+@prefix dmlo: <http://digikar.eu/ontology/> .
+@prefix dmlr: <http://digikar.eu/resource/> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix frbroo: <http://iflastandards.info/ns/fr/frbr/frbroo/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix lvont: <http://lexvo.org/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prism: <http://prismstandard.org/namespaces/basic/2.0/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdh: <https://ontome.net/ns/sdhss/> .
+@prefix sdh-so: <https://ontome.net/ns/social-legal-economic-life/> .
+@prefix sf: <http://www.opengis.net/ont/sf#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix shacl-play: <https://shacl-play.sparna.fr/ontology#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dmlo:RightHolderAssociation a rdfs:Class ;
+    rdfs:label "Rechtsinhaberverbindung"@de,
+        "Right Holding Association"@en ;
+    rdfs:subClassOf prov:Association .
+
+sdh:C1_Entity_Quality a rdfs:Class ;
+    rdfs:label "Entity Quality"@en ;
+    rdfs:subClassOf crm:E2_Temporal_Entity .
+
+sdh:C30_Connotation a rdfs:Class ;
+    rdfs:label "Connotation"@en ;
+    rdfs:subClassOf sdh:C7_Intentional_State .
+
+sdh:C4_Intention a rdfs:Class ;
+    rdfs:label "Intention"@en ;
+    rdfs:subClassOf sdh:C1_Entity_Quality .
+
+sdh:C7_Intentional_State a rdfs:Class ;
+    rdfs:label "Intentional State"@en ;
+    rdfs:subClassOf sdh:C4_Intention .
+
+sdh-so:C14_Holding_of_a_Right_or_Obligation a rdfs:Class ;
+    rdfs:label "Holding of a Right or Obligation"@en ;
+    rdfs:comment """This class models prerogatives, obligations, rights, powers, etc. of subjects of law (human or legal actors) regarding specific persistent items during a given time-span. While sdh-so:C31 Law or Custom expresses general principles, a sdh-so:C17 Right or Obligation applies them to particular instances. Right or obligations can nevertheless exist independently from a general law and be solely based on social representations, e.g. this field being considered as belonging to me in my village.
+
+It is important to note that this class models the same phenomenon, in the form of a time-bound intentional quality, as the one inteded by the crm:E30 Right class. The present class models it as an expression of collective intentionality in time while the crm:E30 Right class captures the propositional content of the phenomenon. If desired, the class crm:E30 Right can be explicitly associated with the present class by using the inherited sdh:P34 has content property which associates a sdh:C4 Intention with its propositional content. In the present case the propositional content of the intention is the collectively accepted right."""@en ;
+    rdfs:subClassOf sdh-so:C27_Legal_Fact ;
+    owl:equivalentClass crm:E30_Right .
+
+sdh-so:C27_Legal_Fact a rdfs:Class ;
+    rdfs:label "Legal Fact"@en ;
+    rdfs:comment """This class models the fact that a persistent item, during a given time-span, is perceived by human groups, a society or portions of it as having a legal quality.
+
+The identity of the instances of this class and its subclasses is provided by the actual existence of the legal fact. This is intendend in the sense of an effective social connotation implying actual rights and obligations. The crm:E52 Time-Span of this class therefore corresponds to the actual existence of the legal fact, not a later knowledge of its existence. To capture the latter information use an instance of sdh:C7 Intentional State, the intentional content being the knowledge of the earlier existence of the legal quality."""@en ;
+    rdfs:subClassOf sdh:C30_Connotation .
+
+sdh-so:C31_Holding_of_a_Right_Type a rdfs:Class ;
+    rdfs:label "Holding of a Right Type"@en ;
+    rdfs:subClassOf crm:E55_Type .
+
+<http://digikar.eu/ontology> a owl:Ontology ;
+    rdfs:label "DMLO" ;
+    dct:abstract "Ontology Design Patterns defined with SHACL. Reusing classes and properties from CIDOC CRM, CRMgeo, CRMsci, CRMpc, FRBRoo, and SDHSS."@en ;
+    dct:created "2023-11-23"^^xsd:date ;
+    dct:creator "Ingo Frank <frank@ios-regensburg.de>" ;
+    dct:description """
+  This version of the DMLO is aligned to the RDFS implementation of CIDOC CRM version 6.2.1 for compatibility reasons because the CRM extensions CRMgeo, CRMsci, and FRBRoo are only available harmonised with CIDOC CRM version 6.2.1 encoded in RDFS.
+  
+  Please note that the class E40 Legal Body in CRM version 6.2.1 is deprecated and that the class E74 Group would have to be used when migrating to the new CIDOC CRM version 7.1.2. Furthermore the class E92 Spacetime Volume is superclass of E4 Period, E93 Presence, and E18 Physical Thing in CRM version 6.2.1 whereat the ontologically problematic superclass relation between E92 Spacetime Volume and E18 Physical Thing was removed in CIDOC CRM version 6.2.8.
+
+  The ontology contains only a small selection of elements from the SDHSS extension which are needed for the place affiliation pattern (i.e. the node shape with target class sdh-so:C14_Holding_of_a_Right_or_Obligation).
+
+  The ontology provides additional information (shacl-play:color, foaf:depiction etc.) needed in order to use the SHACL Play! tools for documentation generation and drawing of UML diagrams: https://shacl-play.sparna.fr/play/doc
+  """@en ;
+    dct:issued "2023-12-06"^^xsd:date ;
+    dct:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dct:modified "2023-12-31"^^xsd:date ;
+    dct:publisher <https://digikar.eu/> ;
+    dct:rightsHolder <https://digikar.eu/> ;
+    dct:title "Digitale Kartenwerkstatt-Ontologie"@de,
+        "Digital Map Lab Ontology"@en ;
+    doap:repository <https://github.com/ieg-dhr/DigiKAR-Ontology-Design> ;
+    owl:imports <https://cidoc-crm.org/crmgeo/sites/default/files/CRMgeo_v1_2.rdfs>,
+        <https://cidoc-crm.org/crmsci/sites/default/files/CRMsci_v1.2.6.rdfs>,
+        <https://cidoc-crm.org/sites/default/files/CRMpc_v1.1_0.rdfs>,
+        <https://cidoc-crm.org/sites/default/files/cidoc_crm_v6.2.1-2018April.rdfs>,
+        <https://opengeospatial.github.io/ogc-geosparql/geosparql11/geo.ttl>,
+        <https://www.cidoc-crm.org/frbroo/sites/default/files/FRBR2.4-draft.rdfs> ;
+    owl:versionInfo "0.2" ;
+    adms:versionNotes """
+  Replaced simple RDF List for representation of right holdings (via property sdh-so:P9_is_right_of) with the qualified relation pattern dmlo:RightHolderAssociation in order to be able to represent not only the order of the right holders but for example also information about the amount of fiefs (i.e. information about the level of microdata on the level of aggregated macrodata).
+
+  Changed definition of dmlo:Place from subclass of crm:E92_Spacetime_Volume to subclass of the union of crm:E92_Spacetime_Volume and crm:E40_Legal_Body to consider places in a very broad sense -- i.e. not only as settlements like villages and towns, but also as administrative units and territories in the Holy Roman Empire.
+
+  Added new nodes shapes dmlo:PrimarySourceShape and dmlo:DerivationShape for provenance information (reusing prov:PrimarySource and prov:Derivation qualified relation patterns from PROV-O) to distinguish between data extracted from primary sources (historical source or scientific publications) and data derived from reused datasets.
+  """@en ;
+    dcat:distribution [ dct:format <https://www.iana.org/assignments/media-types/text/turtle> ;
+            dcat:downloadURL <https://github.com/ieg-dhr/DigiKAR-Ontology-Design/blob/main/dmlo.ttl> ] ;
+    dcat:previousVersion <https://github.com/ieg-dhr/DigiKAR-Ontology-Design/blob/main/dmlo.shacl.ttl> ;
+    dcat:version "0.2" .
+
+dmlo:ActivityShape a sh:NodeShape ;
+    sh:property [ sh:description "A concept from the activity type vocabulary is used to typify the activity instance."@en ;
+            sh:maxCount 1 ;
+            sh:node dmlo:ActivityTypeRestriction ;
+            sh:nodeKind sh:IRI ;
+            sh:path crm:P2_has_type ;
+            sh:severity sh:Violation ],
+        [ sh:class crm:E7_Activity ;
+            sh:description "A preparatory activity had a specific purpose: for example an inauguration had the specific purpose of starting an occupation."@en ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path crm:P20_had_specific_purpose ],
+        [ sh:class dmlo:Place ;
+            sh:description "Property to describe the place where the activity was usually carried out."@en ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path crm:P7_took_place_at ],
+        [ sh:description "Property to describe the time when the activity was carried out."@en ;
+            sh:maxCount 1 ;
+            sh:node dmlo:TimeShape ;
+            sh:nodeKind sh:IRI ;
+            sh:path crm:P4_has_time-span ],
+        [ sh:description "."@en ;
+            sh:minCount 1 ;
+            sh:node dmlo:RoleInActivityShape ;
+            sh:nodeKind sh:IRI ;
+            sh:path crm:P01i_is_domain_of ],
+        [ sh:minCount 1 ;
+            sh:node dmlo:DocumentShape ;
+            sh:nodeKind sh:IRI ;
+            sh:path crm:P70i_is_documented_in ],
+        [ sh:minCount 1 ;
+            sh:node dmlo:PrimarySourceShape ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:qualifiedPrimarySource ],
+        [ sh:maxCount 1 ;
+            sh:node dmlo:DerivationShape ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:qualifiedDerivation ],
+        [ sh:datatype rdfs:Literal ;
+            sh:description "Source term describing the activity type."@en ;
+            sh:maxCount 1 ;
+            sh:path crm:P3_has_note ] ;
+    sh:targetClass crm:E7_Activity ;
+    foaf:depiction dmlr:actor-activity ;
+    shacl-play:color "ffbdca" .
+
+dmlo:PlaceShape a sh:NodeShape ;
+    sh:property [ sh:description "Property to describe an administrative unit, manorial lord, etc. the place is related to."@en ;
+            sh:node dmlo:AffiliationShape ;
+            sh:nodeKind sh:IRI ;
+            sh:path sdh-so:P8i_is_subject_to ],
+        [ sh:node dmlo:PlaceObservationShape ;
+            sh:nodeKind sh:IRI ;
+            sh:path crmsci:O24i_was_measured_by ],
+        [ sh:datatype rdfs:Literal ;
+            sh:minCount 1 ;
+            sh:path rdfs:label ],
+        [ sh:description "Property to describe the time when the place was classified by a specific place type."@en ;
+            sh:node dmlo:PlaceTypeAssignmentShape ;
+            sh:nodeKind sh:IRI ;
+            sh:path crm:P41i_was_classified_by ],
+        [ sh:description "Property to describe the time-independent point coordinates (center) of a place."@en ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:node dmlo:CentroidShape ;
+            sh:nodeKind sh:IRI ;
+            sh:path geo:hasCentroid ],
+        [ sh:description "Property to describe a presence of the place."@en ;
+            sh:node dmlo:PresenceShape ;
+            sh:nodeKind sh:IRI ;
+            sh:path crm:P166i_had_presence ],
+        [ sh:description "Property to describe a name of the place."@en ;
+            sh:minCount 1 ;
+            sh:node dmlo:NameUseShape ;
+            sh:nodeKind sh:IRI ;
+            sh:path frbroo:R63i_was_named_by ] ;
+    sh:targetClass dmlo:Place ;
+    foaf:depiction dmlr:actor-activity,
+        dmlr:place-affiliation,
+        dmlr:place-name,
+        dmlr:place-observation,
+        dmlr:place-point,
+        dmlr:place-presence,
+        dmlr:place-type ;
+    shacl-play:color "e5ccff" .
+
+skos:Concept owl:equivalentClass crm:E55_Type .
+
+dmlo:ActivityTypeRestriction a sh:NodeShape ;
+    rdfs:label "Activity type restriction" ;
+    rdfs:comment "Activity type restriction" ;
+    sh:property [ sh:hasValue <http://digikar.eu/vocabulary/activity> ;
+            sh:nodeKind sh:IRI ;
+            sh:path skos:inScheme ] ;
+    foaf:depiction dmlr:actor-activity ;
+    shacl-play:color "fab565" .
+
+dmlo:AffiliationShape a sh:NodeShape ;
+    sh:property [ sh:description "Property to describe the person or organisation the place is affilated to in a political, manorial, or legal relation."@en ;
+            sh:minCount 1 ;
+            sh:node dmlo:RightHolderAssociationShape ;
+            sh:nodeKind sh:IRI ;
+            sh:path sdh-so:P9_is_right_of ],
+        [ sh:description "A concept from the right type vocabulary is used to classify the kind of affiliation of the place to an administrative unit, territorial ruler or manorial lord (power or manorial relation etc.)."@en ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:node dmlo:RightTypeRestriction ;
+            sh:nodeKind sh:IRI ;
+            sh:path sdh-so:P29_has_holding_of_a_right_type ;
+            sh:severity sh:Violation ],
+        [ sh:description "A concept from the affiliation type vocabulary is used to optionally typify the affiliation as shared or disputed affiliation."@en ;
+            sh:maxCount 1 ;
+            sh:node dmlo:AffiliationTypeRestriction ;
+            sh:nodeKind sh:IRI ;
+            sh:path crm:P2_has_type ;
+            sh:severity sh:Violation ],
+        [ sh:datatype rdfs:Literal ;
+            sh:maxCount 1 ;
+            sh:path crm:P3_has_note ],
+        [ sh:description "Property to describe the time when the affiliation was effective."@en ;
+            sh:maxCount 1 ;
+            sh:node dmlo:TimeShape ;
+            sh:nodeKind sh:IRI ;
+            sh:path crm:P4_has_time-span ],
+        [ sh:datatype rdfs:Literal ;
+            sh:description "Following LOD best practices the the property rdfs:label provides a short label or description which enables the human user to identify and understand the labeled resource (e.g. 'administrative affiliation of place Abend to Erb-Amt Meißen in 1547') ."@en ;
+            sh:languageIn ( "de" "en" ) ;
+            sh:minCount 1 ;
+            sh:path rdfs:label ;
+            sh:uniqueLang true ],
+        [ sh:class sdh-so:C14_Holding_of_a_Right_or_Obligation ;
+            sh:description "Property to refer to the aggregated data (e.g. between the level of estates (microdata) and the level of settlements (macrodata))."@en ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path disco:aggregation ],
+        [ sh:minCount 1 ;
+            sh:node dmlo:DocumentShape ;
+            sh:nodeKind sh:IRI ;
+            sh:path crm:P70i_is_documented_in ],
+        [ sh:minCount 1 ;
+            sh:node dmlo:PrimarySourceShape ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:qualifiedPrimarySource ],
+        [ sh:maxCount 1 ;
+            sh:node dmlo:DerivationShape ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:qualifiedDerivation ] ;
+    sh:targetClass sdh-so:C14_Holding_of_a_Right_or_Obligation ;
+    foaf:depiction dmlr:place-affiliation ;
+    shacl-play:color "82c3ec" .
+
+dmlo:AffiliationTypeRestriction a sh:NodeShape ;
+    rdfs:label "Affiliation type restriction" ;
+    rdfs:comment "Affiliation type restriction" ;
+    sh:property [ sh:hasValue <http://digikar.eu/vocabulary/affiliation> ;
+            sh:nodeKind sh:IRI ;
+            sh:path skos:inScheme ] ;
+    foaf:depiction dmlr:place-affiliation ;
+    shacl-play:color "fab565" .
+
+dmlo:CentroidShape a sh:NodeShape ;
+    sh:property [ sh:datatype rdfs:Literal ;
+            sh:maxCount 1 ;
+            sh:path crm:P3_has_note ],
+        [ sh:datatype geo:wktLiteral ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path geo:asWKT ],
+        [ sh:minCount 1 ;
+            sh:node dmlo:DocumentShape ;
+            sh:nodeKind sh:IRI ;
+            sh:path crm:P70i_is_documented_in ],
+        [ sh:minCount 1 ;
+            sh:node dmlo:PrimarySourceShape ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:qualifiedPrimarySource ],
+        [ sh:maxCount 1 ;
+            sh:node dmlo:DerivationShape ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:qualifiedDerivation ] ;
+    sh:targetClass sf:Point ;
+    foaf:depiction dmlr:place-point ;
+    shacl-play:color "fef3ba" .
+
+dmlo:DeclarativePlaceShape a sh:NodeShape ;
+    sh:property [ sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:node dmlo:GeometryShape ;
+            sh:nodeKind sh:IRI ;
+            sh:path crm:P168_place_is_defined_by ] ;
+    sh:targetClass crmgeo:SP6_Declarative_Place ;
+    foaf:depiction dmlr:place-presence ;
+    shacl-play:color "94cc7d" .
+
+dmlo:DocumentTypeRestriction a sh:NodeShape ;
+    rdfs:label "Document type restriction" ;
+    rdfs:comment "Document type restriction" ;
+    sh:property [ sh:hasValue <http://digikar.eu/vocabulary/document> ;
+            sh:nodeKind sh:IRI ;
+            sh:path skos:inScheme ] ;
+    foaf:depiction dmlr:actor-activity,
+        dmlr:place-affiliation,
+        dmlr:place-name,
+        dmlr:place-observation,
+        dmlr:place-point,
+        dmlr:place-presence,
+        dmlr:place-type ;
+    shacl-play:color "fab565" .
+
+dmlo:DurationShape a sh:NodeShape ;
+    sh:property [ sh:datatype xsd:decimal ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path time:numericDuration ],
+        [ sh:class time:TemporalUnit ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path time:unitType ] ;
+    sh:targetClass time:Duration ;
+    foaf:depiction dmlr:actor-activity,
+        dmlr:place-affiliation,
+        dmlr:place-name,
+        dmlr:place-observation,
+        dmlr:place-presence,
+        dmlr:place-type ;
+    shacl-play:color "e6e4ec" .
+
+dmlo:FunctionTypeRestriction a sh:NodeShape ;
+    rdfs:label "Place type restriction" ;
+    rdfs:comment "Place type restriction" ;
+    sh:property [ sh:hasValue <http://digikar.eu/vocabulary/function> ;
+            sh:nodeKind sh:IRI ;
+            sh:path skos:inScheme ] ;
+    foaf:depiction dmlr:actor-activity ;
+    shacl-play:color "fab565" .
+
+dmlo:GeometryShape a sh:NodeShape ;
+    sh:property [ sh:datatype geo:wktLiteral ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path geo:asWKT ],
+        [ sh:datatype geo:geoJSONLiteral ;
+            sh:maxCount 1 ;
+            sh:path geo:asGeoJSON ],
+        [ sh:datatype xsd:double ;
+            sh:maxCount 1 ;
+            sh:path geo:hasMetricSpatialResolution ],
+        [ sh:datatype xsd:double ;
+            sh:maxCount 1 ;
+            sh:path geo:hasMetricSpatialAccuracy ] ;
+    sh:targetClass geo:Geometry ;
+    foaf:depiction dmlr:place-presence ;
+    shacl-play:color "fef3ba" .
+
+dmlo:MeasurementUnitTypeRestriction a sh:NodeShape ;
+    rdfs:label "Measurement unit type restriction" ;
+    rdfs:comment "Measurement unit type restriction" ;
+    sh:property [ sh:hasValue <http://digikar.eu/vocabulary/unit> ;
+            sh:nodeKind sh:IRI ;
+            sh:path skos:inScheme ] ;
+    foaf:depiction dmlr:place-observation ;
+    shacl-play:color "fab565" .
+
+dmlo:NameUseShape a sh:NodeShape ;
+    sh:property [ sh:minCount 1 ;
+            sh:node dmlo:TimeShape ;
+            sh:nodeKind sh:IRI ;
+            sh:path crm:P4_has_time-span ],
+        [ sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:node dmlo:PlaceAppellationShape ;
+            sh:nodeKind sh:IRI ;
+            sh:path frbroo:R64_used_name ],
+        [ sh:datatype rdfs:Literal ;
+            sh:maxCount 1 ;
+            sh:path crm:P3_has_note ],
+        [ sh:minCount 1 ;
+            sh:node dmlo:DocumentShape ;
+            sh:nodeKind sh:IRI ;
+            sh:path crm:P70i_is_documented_in ],
+        [ sh:minCount 1 ;
+            sh:node dmlo:PrimarySourceShape ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:qualifiedPrimarySource ],
+        [ sh:maxCount 1 ;
+            sh:node dmlo:DerivationShape ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:qualifiedDerivation ] ;
+    sh:targetClass frbroo:F52_Name_Use_Activity ;
+    foaf:depiction dmlr:place-name ;
+    shacl-play:color "82c3ec" .
+
+dmlo:PlaceAppellationShape a sh:NodeShape ;
+    sh:property [ sh:datatype rdfs:Literal ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path crm:P190_has_symbolic_content ],
+        [ sh:class lvont:Language ;
+            sh:description "A concept from the language code vocabulary is used to code the language of the place name."@en ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path crm:P72_has_language ;
+            sh:pattern "^http://lexvo.org/id/iso639-3/" ;
+            sh:severity sh:Violation ] ;
+    sh:targetClass crm:E41_Appellation ;
+    foaf:depiction dmlr:place-name ;
+    shacl-play:color "fef3ba" .
+
+dmlo:PlaceDimensionShape a sh:NodeShape ;
+    sh:property [ sh:description "A concept from the place property type vocabulary is used to classify the observed property of the place."@en ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:node dmlo:PlacePropertyTypeRestriction ;
+            sh:nodeKind sh:IRI ;
+            sh:path crm:P2_has_type ;
+            sh:severity sh:Violation ],
+        [ sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:or ( [ sh:datatype xsd:integer ] [ sh:datatype xsd:decimal ] ) ;
+            sh:path crm:P90_has_value ],
+        [ sh:description "A concept from the measurement unit type vocabulary is used to classify the unit of the measurement."@en ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:node dmlo:MeasurementUnitTypeRestriction ;
+            sh:nodeKind sh:IRI ;
+            sh:path crm:P91_has_unit ;
+            sh:severity sh:Violation ],
+        [ sh:datatype rdfs:Literal ;
+            sh:maxCount 1 ;
+            sh:path crm:P3_has_note ] ;
+    sh:targetClass crm:E54_Dimension ;
+    foaf:depiction dmlr:place-observation ;
+    shacl-play:color "e6e4ec" .
+
+dmlo:PlaceObservationShape a sh:NodeShape ;
+    sh:property [ sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:node dmlo:PlaceDimensionShape ;
+            sh:nodeKind sh:IRI ;
+            sh:path crm:P40_observed_dimension ],
+        [ sh:datatype rdfs:Literal ;
+            sh:maxCount 1 ;
+            sh:path crm:P3_has_note ],
+        [ sh:maxCount 1 ;
+            sh:node dmlo:TimeShape ;
+            sh:nodeKind sh:IRI ;
+            sh:path crm:P4_has_time-span ],
+        [ sh:datatype rdfs:Literal ;
+            sh:minCount 1 ;
+            sh:path rdfs:label ],
+        [ sh:minCount 1 ;
+            sh:node dmlo:DocumentShape ;
+            sh:nodeKind sh:IRI ;
+            sh:path crm:P70i_is_documented_in ],
+        [ sh:minCount 1 ;
+            sh:node dmlo:PrimarySourceShape ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:qualifiedPrimarySource ],
+        [ sh:maxCount 1 ;
+            sh:node dmlo:DerivationShape ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:qualifiedDerivation ] ;
+    sh:targetClass crm:E16_Measurement ;
+    foaf:depiction dmlr:place-observation ;
+    shacl-play:color "82c3ec" .
+
+dmlo:PlacePropertyTypeRestriction a sh:NodeShape ;
+    rdfs:label "Place property type restriction" ;
+    rdfs:comment "Place property type restriction" ;
+    sh:property [ sh:hasValue <http://digikar.eu/vocabulary/dimension> ;
+            sh:nodeKind sh:IRI ;
+            sh:path skos:inScheme ] ;
+    foaf:depiction dmlr:place-observation ;
+    shacl-play:color "fab565" .
+
+dmlo:PlaceTypeAssignmentShape a sh:NodeShape ;
+    sh:property [ sh:description "A concept from the place type vocabulary is used to classify the place phase."@en ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:node dmlo:PlaceTypeRestriction ;
+            sh:nodeKind sh:IRI ;
+            sh:path crm:P42_assigned ;
+            sh:severity sh:Violation ],
+        [ sh:datatype rdfs:Literal ;
+            sh:maxCount 1 ;
+            sh:path crm:P3_has_note ],
+        [ sh:maxCount 1 ;
+            sh:node dmlo:TimeShape ;
+            sh:nodeKind sh:IRI ;
+            sh:path crm:P4_has_time-span ],
+        [ sh:minCount 1 ;
+            sh:node dmlo:DocumentShape ;
+            sh:nodeKind sh:IRI ;
+            sh:path crm:P70i_is_documented_in ],
+        [ sh:minCount 1 ;
+            sh:node dmlo:PrimarySourceShape ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:qualifiedPrimarySource ],
+        [ sh:maxCount 1 ;
+            sh:node dmlo:DerivationShape ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:qualifiedDerivation ] ;
+    sh:targetClass crm:E17_Type_Assignment ;
+    foaf:depiction dmlr:place-type ;
+    shacl-play:color "82c3ec" .
+
+dmlo:PlaceTypeRestriction a sh:NodeShape ;
+    rdfs:label "Place type restriction" ;
+    rdfs:comment "Place type restriction" ;
+    sh:property [ sh:hasValue <http://digikar.eu/vocabulary/place> ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path skos:inScheme ] ;
+    foaf:depiction dmlr:place-type ;
+    shacl-play:color "fab565" .
+
+dmlo:PresenceShape a sh:NodeShape ;
+    rdfs:comment "The class E93 Presence is used to represent the spatial extent of a place throughout a specific temporal extent."@en ;
+    sh:property [ sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:node dmlo:TimeShape ;
+            sh:nodeKind sh:IRI ;
+            sh:path crm:P164_is_temporally_specified_by ],
+        [ sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:node dmlo:DeclarativePlaceShape ;
+            sh:nodeKind sh:IRI ;
+            sh:path crm:P167_was_within ],
+        [ sh:minCount 1 ;
+            sh:node dmlo:DocumentShape ;
+            sh:nodeKind sh:IRI ;
+            sh:path crm:P70i_is_documented_in ],
+        [ sh:minCount 1 ;
+            sh:node dmlo:PrimarySourceShape ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:qualifiedPrimarySource ],
+        [ sh:maxCount 1 ;
+            sh:node dmlo:DerivationShape ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:qualifiedDerivation ],
+        [ sh:datatype rdfs:Literal ;
+            sh:maxCount 1 ;
+            sh:path crm:P3_has_note ] ;
+    sh:targetClass crm:E93_Presence ;
+    foaf:depiction dmlr:place-presence ;
+    shacl-play:color "e5ccff" .
+
+dmlo:RightHolderAssociationShape a sh:NodeShape ;
+    sh:property [ sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:or ( [ sh:datatype xsd:integer ] [ sh:datatype xsd:decimal ] ) ;
+            sh:path dmlo:hasIndex ],
+        [ sh:class crm:E39_Actor ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path dmlo:hasRightHolder ] ;
+    sh:targetClass dmlo:RightHolderAssociation ;
+    foaf:depiction dmlr:place-affiliation .
+
+dmlo:RightTypeRestriction a sh:NodeShape ;
+    rdfs:label "Right type restriction" ;
+    rdfs:comment "Right type restriction" ;
+    sh:property [ sh:hasValue <http://digikar.eu/vocabulary/right> ;
+            sh:nodeKind sh:IRI ;
+            sh:path skos:inScheme ] ;
+    foaf:depiction dmlr:place-affiliation ;
+    shacl-play:color "fab565" .
+
+dmlo:RoleInActivityShape a sh:NodeShape ;
+    sh:property [ sh:class crm:E39_Actor ;
+            sh:description "Property to describe the agent (person or organization)."@en ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path crm:P02_has_range ],
+        [ sh:description "A concept from the function type vocabulary is used to typify the role instance."@en ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:node dmlo:FunctionTypeRestriction ;
+            sh:nodeKind sh:IRI ;
+            sh:path crm:P14.1_in_the_role_of ;
+            sh:severity sh:Violation ],
+        [ sh:datatype rdfs:Literal ;
+            sh:description "Source term describing the role."@en ;
+            sh:maxCount 1 ;
+            sh:path crm:P3_has_note ] ;
+    sh:targetClass crm:PC14_carried_out_by ;
+    foaf:depiction dmlr:actor-activity .
+
+dmlo:TimeSpanTypeRestriction a sh:NodeShape ;
+    rdfs:label "Date specification type restriction" ;
+    rdfs:comment "Date specification type restriction" ;
+    sh:property [ sh:hasValue <http://digikar.eu/vocabulary/time> ;
+            sh:nodeKind sh:IRI ;
+            sh:path skos:inScheme ] ;
+    foaf:depiction dmlr:actor-activity,
+        dmlr:place-affiliation,
+        dmlr:place-name,
+        dmlr:place-observation,
+        dmlr:place-presence,
+        dmlr:place-type ;
+    shacl-play:color "fab565" .
+
+sdh-so:P29_has_holding_of_a_right_type a rdf:Property ;
+    rdfs:label "has holding of a right type"@en ;
+    rdfs:domain sdh-so:C14_Holding_of_a_Right_or_Obligation ;
+    rdfs:range sdh-so:C31_Holding_of_a_Right_Type .
+
+sdh-so:P8_is_subjection_of a rdf:Property ;
+    rdfs:label "is subjection of"@en ;
+    rdfs:comment "This property associates the persistent item to the right subjection it is concerned by"@en ;
+    rdfs:domain sdh-so:C14_Holding_of_a_Right_or_Obligation ;
+    rdfs:range crm:E77_Persistent_Item ;
+    owl:inverseOf sdh-so:P8i_is_subject_to .
+
+sdh-so:P9i_has_right a rdf:Property ;
+    rdfs:label "has right"@en ;
+    rdfs:domain crm:E39_Actor ;
+    rdfs:range sdh-so:C14_Holding_of_a_Right_or_Obligation ;
+    owl:inverseOf sdh-so:P9_is_right_of .
+
+dmlo:Place a owl:Class ;
+    rdfs:label "Ort"@de,
+        "Place"@en ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:unionOf ( crm:E92_Spacetime_Volume crm:E40_Legal_Body ) ] .
+
+dcat:Dataset rdfs:subClassOf frbroo:F2_Expression .
+
+sdh-so:P8i_is_subject_to a rdf:Property ;
+    rdfs:label "is subject to"@en ;
+    rdfs:domain crm:E77_Persistent_Item ;
+    rdfs:range sdh-so:C14_Holding_of_a_Right_or_Obligation ;
+    owl:inverseOf sdh-so:P8_is_subjection_of .
+
+sdh-so:P9_is_right_of a rdf:Property ;
+    rdfs:label "is right of"@en ;
+    rdfs:comment "This property associates the actor or actors having the right over a given persistent item. If more then one actor is associated, this means they exercise their right on the same persistent item collectively and during the same period of time."@en ;
+    rdfs:domain sdh-so:C14_Holding_of_a_Right_or_Obligation ;
+    rdfs:range crm:E39_Actor ;
+    owl:inverseOf sdh-so:P9i_has_right .
+
+dmlr:place-point a foaf:Image ;
+    dct:title "Place Point Coordinates Pattern"@en ;
+    sh:order 1 .
+
+dmlo:DerivationShape a sh:NodeShape ;
+    sh:property [ sh:class dcat:Dataset ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:entity ] ;
+    sh:targetClass prov:Derivation ;
+    foaf:depiction dmlr:actor-activity,
+        dmlr:place-affiliation,
+        dmlr:place-name,
+        dmlr:place-observation,
+        dmlr:place-point,
+        dmlr:place-presence,
+        dmlr:place-type .
+
+dmlo:DocumentShape a sh:NodeShape ;
+    sh:property [ sh:datatype rdfs:Literal ;
+            sh:maxCount 1 ;
+            sh:path fabio:hasShortTitle ],
+        [ sh:datatype rdfs:Literal ;
+            sh:maxCount 1 ;
+            sh:path dct:bibliographicCitation ],
+        [ sh:datatype rdfs:Literal ;
+            sh:maxCount 1 ;
+            sh:path prism:doi ;
+            sh:pattern "^10.\\d{4,9}/[-._;()/:A-Z0-9]+$" ],
+        [ sh:datatype xsd:anyURI ;
+            sh:path dcat:landingPage ],
+        [ sh:description "A concept from the document type vocabulary is used to classify the document used as data source."@en ;
+            sh:node dmlo:DocumentTypeRestriction ;
+            sh:nodeKind sh:IRI ;
+            sh:path crm:P2_has_type ;
+            sh:severity sh:Violation ] ;
+    sh:targetClass frbroo:F2_Expression,
+        dcat:Dataset ;
+    foaf:depiction dmlr:actor-activity,
+        dmlr:place-affiliation,
+        dmlr:place-name,
+        dmlr:place-observation,
+        dmlr:place-point,
+        dmlr:place-presence,
+        dmlr:place-type ;
+    shacl-play:color "fddc34" .
+
+dmlo:PrimarySourceShape a sh:NodeShape ;
+    sh:property [ sh:class frbroo:F2_Expression ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:entity ],
+        [ sh:datatype rdfs:Literal ;
+            sh:path bibo:locator ] ;
+    sh:targetClass prov:PrimarySource ;
+    foaf:depiction dmlr:actor-activity,
+        dmlr:place-affiliation,
+        dmlr:place-name,
+        dmlr:place-observation,
+        dmlr:place-point,
+        dmlr:place-presence,
+        dmlr:place-type .
+
+dmlo:TimeShape a sh:NodeShape ;
+    rdfs:comment "CIDOC CRM’s E52 Time-Span class and its properties for temporal information incl. relative dating."@en ;
+    sh:property [ sh:description "terminus ante quem "@en ;
+            sh:maxCount 1 ;
+            sh:name "limit before which"@en ;
+            sh:or ( [ sh:datatype xsd:date ] [ sh:datatype xsd:gYearMonth ] [ sh:datatype xsd:gYear ] ) ;
+            sh:order 5 ;
+            sh:path crm:P82b_end_of_the_end ],
+        [ sh:datatype rdfs:Literal ;
+            sh:description "Information (e.g. a note detailing a scholarly opinion) about the uncertainty or vagueness of the beginning of the time-span."@en ;
+            sh:maxCount 1 ;
+            sh:order 6 ;
+            sh:path crm:P79_beginning_is_qualified_by ],
+        [ sh:datatype rdfs:Literal ;
+            sh:description "Information (e.g. a note detailing a scholarly opinion) about the uncertainty or vagueness of the end of the time-span."@en ;
+            sh:maxCount 1 ;
+            sh:order 7 ;
+            sh:path crm:P80_end_is_qualified_by ],
+        [ sh:maxCount 1 ;
+            sh:node dmlo:DurationShape ;
+            sh:nodeKind sh:IRI ;
+            sh:order 8 ;
+            sh:path crm:P191_had_duration ],
+        [ sh:description "Property to refer to a time-span from which the time-span was derived (e.g. to normalize date information to the granularity of year for information retrieval purposes)."@en ;
+            sh:maxCount 1 ;
+            sh:name "derived from time-span"@en ;
+            sh:node dmlo:TimeShape ;
+            sh:nodeKind sh:IRI ;
+            sh:order 9 ;
+            sh:path prov:wasDerivedFrom ],
+        [ sh:description "A concept from the date specification type vocabulary is used to classify the time-span."@en ;
+            sh:maxCount 1 ;
+            sh:name "has type"@en ;
+            sh:node dmlo:TimeSpanTypeRestriction ;
+            sh:nodeKind sh:IRI ;
+            sh:order 10 ;
+            sh:path crm:P2_has_type ;
+            sh:severity sh:Violation ],
+        [ sh:datatype rdfs:Literal ;
+            sh:description "Date information in free text form."@en ;
+            sh:maxCount 1 ;
+            sh:name "has note"@en ;
+            sh:order 1 ;
+            sh:path crm:P3_has_note ],
+        [ sh:description "terminus post quem"@en ;
+            sh:maxCount 1 ;
+            sh:name "limit after which"@en ;
+            sh:or ( [ sh:datatype xsd:date ] [ sh:datatype xsd:gYearMonth ] [ sh:datatype xsd:gYear ] ) ;
+            sh:order 2 ;
+            sh:path crm:P82a_begin_of_the_begin ],
+        [ sh:description "terminus a quo"@en ;
+            sh:maxCount 1 ;
+            sh:name "limit from which"@en ;
+            sh:or ( [ sh:datatype xsd:date ] [ sh:datatype xsd:gYearMonth ] [ sh:datatype xsd:gYear ] ) ;
+            sh:order 3 ;
+            sh:path crm:P81a_end_of_the_begin ],
+        [ sh:description "terminus ad quem"@en ;
+            sh:maxCount 1 ;
+            sh:name "limit to which"@en ;
+            sh:or ( [ sh:datatype xsd:date ] [ sh:datatype xsd:gYearMonth ] [ sh:datatype xsd:gYear ] ) ;
+            sh:order 4 ;
+            sh:path crm:P81b_begin_of_the_end ] ;
+    sh:targetClass crm:E52_Time-Span ;
+    foaf:depiction dmlr:actor-activity,
+        dmlr:place-affiliation,
+        dmlr:place-name,
+        dmlr:place-observation,
+        dmlr:place-presence,
+        dmlr:place-type ;
+    shacl-play:color "86bcc8" .
+
+dmlr:place-name a foaf:Image ;
+    dct:title "Place Name Pattern"@en ;
+    sh:order 2 .
+
+dmlr:place-type a foaf:Image ;
+    dct:title "Place Type Pattern"@en ;
+    sh:order 3 .
+
+dmlr:place-presence a foaf:Image ;
+    dct:title "Place Spatial Extension Pattern"@en ;
+    sh:order 4 .
+
+dmlr:actor-activity a foaf:Image ;
+    dct:title "Actor Activity Pattern"@en ;
+    sh:order 7 .
+
+dmlr:place-affiliation a foaf:Image ;
+    dct:title "Place Affiliation Pattern"@en ;
+    sh:order 5 .
+
+dmlr:place-observation a foaf:Image ;
+    dct:title "Place Observation Pattern"@en ;
+    sh:order 6 .
+

@@ -1,0 +1,123 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix dct: <http://purl.org/dc/terms/> .
+
+@prefix gnd: <http://d-nb.info/gnd/> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+@prefix gov-types: <http://gov.genealogy.net/types.owl#> .
+@prefix gndo: <https://d-nb.info/standards/elementset/gnd#> .
+@prefix ontohgis: <http://purl.org/ontohgis#> .
+
+@prefix dmlr: <http://digikar.eu/resource/> .
+@prefix dmlo: <http://digikar.eu/ontology/> .
+@prefix dmlv: <http://digikar.eu/vocabulary/> .
+
+@prefix dmlv-right: <http://digikar.eu/vocabulary/right/> .
+
+
+dmlv:right a skos:ConceptScheme ;
+  rdfs:label "Herrschaftsarten"@de , "Right/Dominion Types"@en ;
+  skos:notation "right" ;
+  skos:prefLabel "Arten der Herrschaftsrechte oder Herrschaftsformen"@de ;
+  skos:prefLabel "Right/Dominion Types"@en ;
+  skos:definition "Begriffe zur Typisierung der Herrschaftsträgerschaft (z.B. grundherrschaftlicher Besitz, Zugehörigkeit zu einer Gerichtsbarkeit oder auch konfessionelle Zugehörigkeit)."@de ;
+  skos:hasTopConcept dmlv-right:administrative ;
+  skos:hasTopConcept dmlv-right:manorial ;
+  skos:hasTopConcept dmlv-right:ecclesiastical ;
+  skos:hasTopConcept dmlv-right:legal ;
+  skos:hasTopConcept dmlv-right:denominational ;
+  dct:creator "Ingo Frank <frank@ios-regensburg.de>" ; 
+  dct:issued "2024-01-10"^^xsd:date ;
+  dct:license <https://creativecommons.org/licenses/by/4.0/> ;
+  dct:publisher <https://digikar.eu/> ;
+  dct:rightsHolder <https://digikar.eu/>   
+.
+
+dmlv-right:administrative a skos:Concept ;
+  rdfs:label "landesherrschaftlich"@de , "administrative"@en ;
+  skos:notation "administrative" ;
+  skos:prefLabel "landesherrschaftlich"@de ;
+  skos:altLabel "landesherrlich"@de ;
+  skos:prefLabel "administrative"@en ;
+  skos:definition "Begriff zur Typisierung einer Zugehörigkeit bzw. Herrschaftsbeziehung als landesherrschaftlicher Beziehung (zwischen Ort und landesherrlicher Verwaltungseinheit)."@de ;
+  skos:inScheme dmlv:right ;
+  skos:editorialNote "\"Die Verwaltungszugehörigkeit beschreibt die aus der Überlieferung feststellbaren Zuordnungen zu landesherrlichen beziehungsweise staatlichen Verwaltungsbezirken.\" https://hov.isgv.de/info/5-verwaltungszugehoerigkeit"@de 
+.
+
+dmlv-right:manorial a skos:Concept ;
+  rdfs:label "grundherrschaftlich"@de , "manorial"@en ;
+  skos:notation "manorial" ;
+  skos:prefLabel "grundherrschaftlich"@de ;
+  skos:prefLabel "manorial"@en ;
+  skos:definition "Begriff zur Typisierung einer Zugehörigkeit bzw. Herrschaftsbeziehung als grundherrschaftlicher Beziehung."@de ;
+  skos:inScheme dmlv:right 
+.
+
+dmlv-right:patrimonial a skos:Concept ;
+  rdfs:label "patrimonial"@de , "patrimonial"@en ;
+  skos:notation "patrimonial" ;
+  skos:prefLabel "patrimonial"@de ;
+  skos:prefLabel "patrimonial"@en ;
+  skos:altLabel "ererbt"@de ;
+  skos:definition "Begriff zur Typisierung einer Zugehörigkeit bzw. Herrschaftsbeziehung als patrimonialer grundherrschaftlicher Beziehung."@de ;
+  skos:broader dmlv-right:manorial ;
+  skos:inScheme dmlv:right ;
+  skos:editorialNote "Is this concept too specific for our classification purposes and therefore not needed anymore?"@en 
+.
+
+dmlv-right:ecclesiastical a skos:Concept ;
+  rdfs:label "kirchlich"@de , "ecclesiastical"@en ;
+  skos:notation "ecclesiastical" ;
+  skos:prefLabel "kirchlich"@de ;
+  skos:prefLabel "ecclesiastical"@en ;
+  skos:definition "Begriff zur Typisierung einer Zugehörigkeit bzw. Herrschaftsbeziehung als kirchlicher Beziehung."@de ;
+  skos:inScheme dmlv:right 
+.
+
+dmlv-right:legal a skos:Concept ;
+  rdfs:label "juristisch"@de , "legal"@en ;
+  skos:notation "legal" ; # juridical 
+  skos:prefLabel "juristisch"@de ;
+  skos:prefLabel "legal"@en ;
+  skos:altLabel "juridical"@en ;
+  skos:definition "Begriff zur Typisierung einer Zugehörigkeit bzw. Herrschaftsbeziehung als juristischer Beziehung."@de ;
+  skos:inScheme dmlv:right 
+.
+
+dmlv-right:high-justice a skos:Concept ;
+  rdfs:label "Hochgerichtsbarkeit"@de , "high-justice"@en ; 
+  skos:notation "high-justice" ;
+  skos:prefLabel "Hochgerichtsbarkeit"@de ;
+  skos:prefLabel "high-justice"@en ;
+  skos:altLabel "Blutgerichtsbarkeit"@de ;
+  skos:altLabel "blood justice"@en ;
+  skos:broader dmlv-right:legal ;
+  skos:inScheme dmlv:right 
+.
+
+dmlv-right:low-justice a skos:Concept ;
+  rdfs:label "Niedergerichtsbarkeit"@de , "low-justice"@en ;
+  skos:notation "low-justice" ;
+  skos:prefLabel "Niedergerichtsbarkeit"@de ;
+  skos:prefLabel "low-justice"@en ;
+  skos:altLabel "Niedere Gerichtsbarkeit"@de ;
+  skos:altLabel "patrimoniale Gerichtsbarkeit"@de ;
+  skos:broader dmlv-right:legal ;
+  skos:inScheme dmlv:right 
+.
+
+dmlv-right:denominational a skos:Concept ;
+  rdfs:label "konfessionell"@de , "denominational"@en ;
+  skos:notation "denominational" ;
+  skos:prefLabel "konfessionell"@de ;
+  skos:prefLabel "denominational"@en ;
+  skos:definition "Begriff zur Typisierung einer Zugehörigkeit bzw. Herrschaftsbeziehung als konfessioneller Beziehung."@de ;
+  skos:inScheme dmlv:right 
+.
+

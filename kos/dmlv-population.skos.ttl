@@ -1,0 +1,110 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix dct: <http://purl.org/dc/terms/> .
+
+@prefix gnd: <http://d-nb.info/gnd/> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+@prefix gov-types: <http://gov.genealogy.net/types.owl#> .
+@prefix gndo: <https://d-nb.info/standards/elementset/gnd#> .
+@prefix ontohgis: <http://purl.org/ontohgis#> .
+
+@prefix dmlr: <http://digikar.eu/resource/> .
+@prefix dmlo: <http://digikar.eu/ontology/> .
+@prefix dmlv: <http://digikar.eu/vocabulary/> .
+
+@prefix dmlv-population: <http://digikar.eu/vocabulary/population/> .
+
+
+dmlv:population a skos:ConceptScheme ;
+  rdfs:label "Einwohner" ;
+  skos:notation "population" ;
+  skos:prefLabel "Arten von Einwohnern"@de ; 
+  skos:prefLabel "Population Types"@en ; # Place Property Types ...?! 
+  skos:definition "Begriffe zur Kodierung der Art von Einwohnern."@de ; 
+  skos:hasTopConcept dmlv-population:bm ;
+  skos:hasTopConcept dmlv-population:gr ;
+  skos:hasTopConcept dmlv-population:hr ;
+  skos:hasTopConcept dmlv-population:hs ;
+  skos:hasTopConcept dmlv-population:mr ;
+  skos:hasTopConcept dmlv-population:pf ;
+  skos:hasTopConcept dmlv-population:co ;
+  skos:hasTopConcept dmlv-population:ir ;    
+  skos:editorialNote "Translations of labels of concepts not yet provided."@en ;
+  skos:scopeNote "Concepts to be used for population data reused from the RepSax database."@en ;
+  dct:source "Concept definitions (where available) were taken from the RepSax glossary: https://repsax.isgv.de/hilfe.php"@en ;
+  dct:creator "Ingo Frank <frank@ios-regensburg.de>" ; 
+  dct:issued "2024-01-10"^^xsd:date ;
+  dct:license <https://creativecommons.org/licenses/by/4.0/> ;
+  dct:publisher <https://digikar.eu/> ;
+  dct:rightsHolder <https://digikar.eu/> 
+.
+
+dmlv-population:bm a skos:Concept ;
+  rdfs:label "Besessene Mann" ;
+  skos:notation "bm" ;
+  skos:prefLabel "Besessene Mann"@de ;
+  skos:definition "Einwohner, der Land besaß."@de ;
+  skos:inScheme dmlv:population 
+.
+
+dmlv-population:gr a skos:Concept ;
+  rdfs:label "Gärtner" ;
+  skos:notation "gr" ;
+  skos:prefLabel "Gärtner"@de ;
+  skos:altLabel "Erbgärtner"@de ;
+  skos:definition "Grundbesitzer, der einen Garten besitzt und über einen erheblich geringeren Grundbesitz als Bauern verfügt; siehe auch Hintersasser."@de ; 
+  skos:related dmlv-population:hs ;
+  skos:inScheme dmlv:population 
+.
+
+dmlv-population:hr a skos:Concept ;
+  rdfs:label "Häusler" ;
+  skos:notation "hr" ;
+  skos:prefLabel "Häusler"@de ;
+  skos:definition "Einwohner eines Dorfes, der nur ein Haus besitzt, aber keinen Grundbesitz."@de ; 
+  skos:inScheme dmlv:population 
+.
+
+dmlv-population:hs a skos:Concept ;
+  rdfs:label "Hintersasser" ;
+  skos:notation "hs" ;
+  skos:prefLabel "Hintersasser"@de ;
+  skos:definition "Kleinbauer, der so wenig Acker besitzt, dass er kein Zugvieh halten kann; auch Bezeichnung für einen Mietbewohner."@de ; 
+  skos:inScheme dmlv:population 
+.
+
+dmlv-population:mr a skos:Concept ;
+  rdfs:label "Müller" ;
+  skos:notation "mr" ;
+  skos:prefLabel "Müller"@de ;
+  skos:inScheme dmlv:population 
+.
+
+dmlv-population:pf a skos:Concept ;
+  rdfs:label "Pferdner" ;
+  skos:notation "pf" ;
+  skos:prefLabel "Pferdner"@de ;
+  skos:definition "Bezeichnung für Einwohner, die Frondienste mit Pferden leisten."@de ; 
+  skos:inScheme dmlv:population 
+.
+
+dmlv-population:co a skos:Concept ;
+  rdfs:label "Cosatter" ;
+  skos:notation "co" ;
+  skos:prefLabel "Cosatter"@de ;
+  skos:inScheme dmlv:population 
+.
+
+dmlv-population:ir a skos:Concept ;
+  rdfs:label "Inwohner" ;
+  skos:notation "ir" ;
+  skos:prefLabel "Inwohner"@de ;
+  skos:inScheme dmlv:population 
+.
+

@@ -1,0 +1,56 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix dct: <http://purl.org/dc/terms/> .
+
+@prefix gnd: <http://d-nb.info/gnd/> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+@prefix dmlr: <http://digikar.eu/resource/> .
+@prefix dmlo: <http://digikar.eu/ontology/> .
+@prefix dmlv: <http://digikar.eu/vocabulary/> .
+
+@prefix dmlv-affiliation: <http://digikar.eu/vocabulary/affiliation/> .
+
+
+dmlv:affiliation a skos:ConceptScheme ;
+  rdfs:label "Zugehörigkeitsarten"@de , "Affiliation Types"@en ;
+  skos:notation "affiliation" ;
+  skos:prefLabel "Arten der Zugehörigkeit"@de ;
+  skos:prefLabel "Affiliation Types"@en ;
+  skos:definition "Begriffe zur Typisierung der Herrschaftsbeziehung zwischen einem Ort und Herrschaftsträgern."@de ;
+  skos:definition "Concepts used to characterize a right holding relationship between a place and the right holders."@en ;
+  skos:hasTopConcept dmlv-affiliation:shared ;
+  skos:hasTopConcept dmlv-affiliation:disputed ;
+  dct:creator "Ingo Frank <frank@ios-regensburg.de>" ; 
+  dct:issued "2024-01-10"^^xsd:date ;
+  dct:license <https://creativecommons.org/licenses/by/4.0/> ;
+  dct:publisher <https://digikar.eu/> ;
+  dct:rightsHolder <https://digikar.eu/> 
+.
+
+dmlv-affiliation:shared a skos:Concept ;
+  rdfs:label "geteilt"@de , "shared"@en ;
+  skos:notation "shared" ;
+  skos:prefLabel "geteilt"@de ;
+  skos:prefLabel "shared"@en ;
+  skos:altLabel "anteilig"@de ;
+  skos:altLabel "proportionate"@en ;
+  skos:scopeNote "Begriff zur Typisierung einer Herrschaftsbeziehung mit mindestens zwei Herrschaftsträgern, die sich die Herrschaft teilen."@de ;
+  skos:scopeNote "Concept to classify a right holding relation including at least two right holders: e.g. shared dominion of two manorial lords."@en ;
+  skos:inScheme dmlv:affiliation 
+.
+
+dmlv-affiliation:disputed a skos:Concept ;
+  rdfs:label "umstritten"@de , "disputed"@en ;
+  skos:notation "disputed" ;
+  skos:prefLabel "umstritten"@de ;
+  skos:prefLabel "disputed"@en ;
+  skos:scopeNote "Begriff zur Typisierung einer Herrschaftsbeziehung mit mindestens zwei Herrschaftsträgern, zwischen denen die Herrschaft umstritten ist."@de ;
+  skos:scopeNote "Concept to classify a right holding relation including at least two right holders: e.g. disputed dominion of two manorial lords."@en ;
+  skos:inScheme dmlv:affiliation 
+.

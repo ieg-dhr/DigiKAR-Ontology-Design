@@ -1,0 +1,200 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix dct: <http://purl.org/dc/terms/> .
+
+@prefix gnd: <http://d-nb.info/gnd/> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+@prefix gov-types: <http://gov.genealogy.net/types.owl#> .
+@prefix gndo: <https://d-nb.info/standards/elementset/gnd#> .
+@prefix ontohgis: <http://purl.org/ontohgis#> .
+
+@prefix dmlr: <http://digikar.eu/resource/> .
+@prefix dmlo: <http://digikar.eu/ontology/> .
+@prefix dmlv: <http://digikar.eu/vocabulary/> .
+
+@prefix dmlv-place: <http://digikar.eu/vocabulary/place/> .
+
+
+dmlv:place a skos:ConceptScheme ;
+  rdfs:label "Ortstypologie"@de , "Place Typology"@en ;
+  skos:notation "pt" ;
+  skos:prefLabel "Ortstypologie"@de ;
+  skos:prefLabel "Place Typology"@en ;
+  skos:definition "Ortstypologie für DigiKAR."@de ;
+  skos:definition "Place typology for DigiKAR."@en ;
+  skos:hasTopConcept dmlv-place:st ;
+  skos:hasTopConcept dmlv-place:at ;
+  skos:editorialNote "Translations of labels of concepts may be missing. Mappings to other place type vocabularies are not complete."@en ;
+  dct:creator "Ingo Frank <frank@ios-regensburg.de>" ; 
+  dct:issued "2024-01-10"^^xsd:date ;
+  dct:license <https://creativecommons.org/licenses/by/4.0/> ;
+  dct:publisher <https://digikar.eu/> ;
+  dct:rightsHolder <https://digikar.eu/>   
+.
+
+dmlv-place:st a skos:Concept ;
+  rdfs:label "Siedlung"@de , "Settlement"@en ;
+  skos:notation "st" ;
+  skos:prefLabel "Siedlung"@de ;
+  skos:prefLabel "Settlement"@en ;
+  skos:altLabel "Ortschaft"@de ;
+  skos:altLabel "Locality"@en ;
+  skos:altLabel "Wohnplatz"@de ;  
+  skos:inScheme dmlv:place ;
+  skos:exactMatch gov-types:129 
+.
+
+dmlv-place:vi a skos:Concept ;
+  rdfs:label "Dorf"@de , "Village"@en  ;
+  skos:notation "vi" ;
+  skos:prefLabel "Dorf"@de ;
+  skos:prefLabel "Village"@en ;
+  skos:broader dmlv-place:st ;
+  skos:inScheme dmlv:place ;
+  skos:exactMatch gov-types:55
+.
+
+dmlv-place:to a skos:Concept ;
+  rdfs:label "Stadt"@de , "Town"@en ;
+  skos:notation "to" ;
+  skos:prefLabel "Stadt"@de ;
+  skos:prefLabel "Town"@en ;
+  skos:broader dmlv-place:st ;
+  skos:inScheme dmlv:place ;
+  skos:exactMatch gov-types:51
+.
+
+dmlv-place:mt a skos:Concept ;
+  rdfs:label "Marktflecken"@de , "Market Town"@en ;
+  skos:notation "mt" ;
+  skos:prefLabel "Marktflecken"@de ;
+  skos:prefLabel "Market Town"@en ;
+  skos:broader dmlv-place:st ;
+  skos:inScheme dmlv:place ;
+  skos:closeMatch gov-types:233
+.
+
+dmlv-place:at a skos:Concept ;
+  rdfs:label "Verwaltungsgebiet"@de , "Administrative Area"@en ;
+  skos:notation "at" ;
+  skos:prefLabel "Verwaltungsgebiet"@de ;
+  skos:prefLabel "Administrative Area"@en ;
+  skos:altLabel "Verwaltungseinheit"@de ;
+  skos:altLabel "Administrative Unit"@en ;
+  skos:inScheme dmlv:place ;
+  skos:exactMatch gndo:AdministrativeUnit ;
+  skos:exactMatch ontohgis:object_20
+.
+
+dmlv-place:sa a skos:Concept ;
+  rdfs:label "Weltliches Verwaltungsgebiet"@de , "Secular Administrative Area"@en ;
+  skos:notation "sa" ;
+  skos:prefLabel "Weltliches Verwaltungsgebiet"@de ;
+  skos:prefLabel "Secular Administrative Area"@en ;
+  skos:altLabel "Weltliche Verwaltungseinheit"@en ;
+  skos:altLabel "Secular Administrative Unit"@en ;
+  skos:broader dmlv-place:at ;
+  skos:inScheme dmlv:place ;
+  skos:exactMatch gov-types:group_1 ;
+  skos:exactMatch gndo:TerritorialCorporateBodyOrAdministrativeUnit ;
+  skos:exactMatch ontohgis:object_3014
+.
+
+dmlv-place:am a skos:Concept ;
+  rdfs:label "Amt"@de , "Amt"@en ;
+  skos:notation "am" ;
+  skos:prefLabel "Amt"@de ;
+  skos:prefLabel "Amt"@en ;
+  skos:broader dmlv-place:sa ;
+  skos:inScheme dmlv:place ;
+  skos:exactMatch gov-types:78
+.
+
+dmlv-place:ic a skos:Concept ;
+  rdfs:label "Freie Reichsstadt"@de , "Free Imperial City"@en ;
+  skos:notation "ic" ;
+  skos:prefLabel "Freie Reichsstadt"@de ;
+  skos:prefLabel "Free Imperial City"@en ;
+  skos:broader dmlv-place:sa ;
+  skos:inScheme dmlv:place ;
+  skos:exactMatch gov-types:93
+.
+
+dmlv-place:pr a skos:Concept ;
+  rdfs:label "Fürstentum"@de , "Principality"@en ;
+  skos:notation "pr" ;
+  skos:prefLabel "Fürstentum"@de ;
+  skos:prefLabel "Principality"@en ;
+  skos:broader dmlv-place:sa ;
+  skos:inScheme dmlv:place ;
+  skos:exactMatch gov-types:60 ;
+  skos:exactMatch gnd:4155609-4
+.
+
+dmlv-place:pb a skos:Concept ;
+  rdfs:label "Hochstift"@de , "Hochstift"@en ;
+  skos:notation "pb" ;
+  skos:prefLabel "Hochstift"@de ;
+  skos:prefLabel "Hochstift"@en ;
+  skos:altLabel "Fürststift"@de ;
+  skos:altLabel "Fürstbistum"@de ;
+  skos:altLabel "Prince-Bishopric"@en ;
+  skos:definition "Weltliches Herrschaftsgebiet bzw. geistliches Territorium mit einem Bischof als Landesfürst (Fürstbischof)."@de ;
+  skos:broader dmlv-place:sa ;
+  skos:inScheme dmlv:place ;
+  skos:exactMatch gov-types:183 ;
+  skos:exactMatch gnd:4160263-8 ;
+  skos:exactMatch wd:Q3403564 ;
+.
+
+dmlv-place:ea a skos:Concept ;
+  rdfs:label "Kirchliches Verwaltungsgebiet"@de , "Ecclesiastical Administrative Area"@en ;
+  skos:notation "ea" ;
+  skos:prefLabel "Kirchliches Verwaltungsgebiet"@de ;
+  skos:prefLabel "Ecclesiastical Administrative Area"@en ;
+  skos:altLabel "Kirchliche Verwaltungseinheit"@de ;
+  skos:altLabel "Ecclesiastical Administrative Unit"@en ;
+  skos:broader dmlv-place:at ;
+  skos:inScheme dmlv:place ;
+  skos:exactMatch gov-types:group_3 ;
+  skos:exactMatch gndo:ReligiousAdministrativeUnit ;
+  skos:exactMatch ontohgis:object_3012
+.
+
+dmlv-place:bi a skos:Concept ;
+  rdfs:label "Bistum"@de , "Bishopric"@en ;
+  skos:notation "bi" ;
+  skos:prefLabel "Bistum"@de ;
+  skos:prefLabel "Bishopric"@en ;
+  skos:altLabel "Diösese"@de ;
+  skos:altLabel "Diocese"@en ;
+  skos:broader dmlv-place:ea ;
+  skos:inScheme dmlv:place ;
+  skos:exactMatch gov-types:11
+.
+
+dmlv-place:pa a skos:Concept ;
+  rdfs:label "Pfarrei"@de , "Parish"@en  ;
+  skos:notation "pa" ;
+  skos:prefLabel "Pfarrei"@de ;
+  skos:prefLabel "Parish"@en ;
+  skos:broader dmlv-place:ea ;
+  skos:inScheme dmlv:place ;
+  skos:exactMatch gov-types:42
+.
+
+dmlv-place:re a skos:Concept ;
+  rdfs:label "Anwesen"@de , "Real Estate"@en ;
+  skos:notation "re" ;
+  skos:prefLabel "Anwesen"@de ;  skos:altLabel "Liegenschaft"@de ;
+  skos:altLabel "Real Estate"@en ;
+  skos:inScheme dmlv:place ;
+  skos:broadMatch gov-types:120
+.
+
